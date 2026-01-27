@@ -1,23 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Paper Chasers LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Paper Chasers LLC — Professional support services, research, process service, and more.">
 </head>
 <body>
   <h1>Paper Chasers LLC</h1>
-  <p>Professional support services.</p>
-
-  <h2>Services</h2>
-  <ul>
-    <li>Legal Research & Support</li>
-    <li>Process Service</li>
-    <li>Courier & Transport</li>
-  </ul>
-
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:info@paperchasersllc.com">info@paperchasersllc.com</a></p>
+  <p>Site is live.</p>
 </body>
 </html>
