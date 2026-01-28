@@ -203,7 +203,7 @@
 
       <h1>Service Request</h1>
       <p>
-        Use this page to submit a service request. Provide the task details, desired timeframe, and your contact information.
+        Submit a service request below. Provide the task details, desired timeframe, and your contact information.
         We will confirm scope and pricing before work begins.
       </p>
 
@@ -218,11 +218,17 @@
         Prefer phone? Call <a href="tel:+19205728646">(920) 572-8646</a>.
       </p>
 
-      <!--
-        This form uses "mailto:" so it is 100% free (no backend).
-        It opens the visitor's email client with the details filled in.
-      -->
-      <form action="mailto:info@paperchasersllc.com" method="post" enctype="text/plain">
+      <!-- Secure HTTPS submission via FormSubmit (free) -->
+      <form action="https://formsubmit.co/info@paperchasersllc.com" method="POST">
+
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_subject" value="New Service Request — Paper Chasers LLC" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="true" />
+
+        <!-- OPTIONAL: after successful submit, redirect user back to your site -->
+        <input type="hidden" name="_next" value="https://paperchasersllc.com/thank-you.html" />
+
         <div class="form-grid">
 
           <div class="field">
@@ -244,7 +250,7 @@
             <label for="service">Service Type *</label>
             <select id="service" name="Service Type" required>
               <option value="" selected disabled>Select one</option>
-              <option>Legal research & document support (administrative only)</option>
+              <option>Legal research &amp; document support (administrative only)</option>
               <option>Process service</option>
               <option>Courier / transport</option>
               <option>General professional support</option>
@@ -279,14 +285,13 @@
         </div>
 
         <div class="btn-row">
-          <button class="btn" type="submit">Submit Request (Opens Email)</button>
+          <button class="btn" type="submit">Submit Request</button>
           <a class="btn" href="index.html">Back to Home</a>
           <a class="btn" href="terms.html">Terms &amp; Conditions</a>
         </div>
 
         <p class="small">
-          After submission, you’ll be contacted to confirm scope, pricing, and next steps.
-          Payments are accepted after confirmation.
+          Submitting this form does not create an attorney-client relationship. Scope and pricing will be confirmed before work begins.
         </p>
       </form>
 
