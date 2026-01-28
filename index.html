@@ -112,6 +112,12 @@
       padding-bottom: 10px;
     }
 
+    h3 {
+      margin: 18px 0 10px 0;
+      font-size: 1.05em;
+      color: #1f3a5f;
+    }
+
     p {
       margin: 14px 0;
       line-height: 1.75;
@@ -163,6 +169,27 @@
       color: #333;
     }
 
+    /* WHY CHOOSE US */
+    .choose-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .choose-item {
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      padding: 18px;
+      background: #fff;
+    }
+
+    .choose-title {
+      margin: 0 0 6px 0;
+      font-weight: bold;
+    }
+
+    /* Services */
     .services-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -182,6 +209,56 @@
       font-weight: bold;
     }
 
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .testimonial {
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      padding: 18px;
+      background: #fff;
+    }
+
+    .quote {
+      margin: 0;
+      font-style: italic;
+      color: #222;
+    }
+
+    .who {
+      margin: 10px 0 0 0;
+      font-weight: bold;
+      color: #111;
+      font-size: 0.95em;
+    }
+
+    /* FAQ */
+    details {
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fff;
+      margin: 12px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #1f3a5f;
+      outline: none;
+    }
+
+    details p {
+      margin: 12px 0 0 0;
+      font-size: 1.0em;
+    }
+
+    /* Payments */
     .payment-button a {
       display: inline-block;
       padding: 16px 26px;
@@ -209,15 +286,12 @@
     }
 
     @media (max-width: 900px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-      .logo {
-        width: 80%;
-      }
-      .card {
-        padding: 28px;
-      }
+      .about-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .choose-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .logo { width: 80%; }
+      .card { padding: 28px; }
     }
   </style>
 </head>
@@ -280,6 +354,26 @@
         where permitted by applicable law.
       </div>
 
+      <h2>Why Clients Choose Us</h2>
+      <div class="choose-grid">
+        <div class="choose-item">
+          <p class="choose-title">✅ Scope Discipline</p>
+          <p>We confirm scope, timelines, and expectations before work begins—no surprises and no assumptions.</p>
+        </div>
+        <div class="choose-item">
+          <p class="choose-title">✅ Documented Follow-Through</p>
+          <p>Clear communication and written documentation where appropriate, so progress is trackable and defensible.</p>
+        </div>
+        <div class="choose-item">
+          <p class="choose-title">✅ Discretion &amp; Professional Boundaries</p>
+          <p>Client information is handled with discretion and services are performed within professional limits.</p>
+        </div>
+        <div class="choose-item">
+          <p class="choose-title">✅ Local Reliability</p>
+          <p>Wisconsin-based service with an emphasis on the Fox Valley Area, with availability based on scope and scheduling.</p>
+        </div>
+      </div>
+
       <h2>Services</h2>
       <div class="services-grid">
         <div class="service-item">
@@ -299,6 +393,65 @@
           <p>Project-based assistance with defined scope.</p>
         </div>
       </div>
+
+      <h2>Client Feedback</h2>
+      <p>
+        The examples below are anonymized and representative. Replace these with real testimonials as you collect them.
+      </p>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <p class="quote">“Fast communication, clear scope, and exactly what was promised—delivered on time.”</p>
+          <p class="who">— Small Business Client (Fox Valley)</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">“Detail-oriented and reliable. Everything was documented and handled professionally.”</p>
+          <p class="who">— Professional Services Client (Wisconsin)</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">“No guessing, no surprises. Clear expectations and clean execution.”</p>
+          <p class="who">— Project Client</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">“Discreet, efficient, and organized. Would use again.”</p>
+          <p class="who">— Repeat Client</p>
+        </div>
+      </div>
+
+      <h2>FAQ</h2>
+      <details>
+        <summary>Do you provide legal advice?</summary>
+        <p>
+          No. Paper Chasers LLC is not a law firm and does not provide legal advice. Any legal research or document support is administrative in nature and performed only where permitted by applicable law.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I start a request?</summary>
+        <p>
+          Email or call with the task, timeframe, and any relevant details. We will confirm scope, timeline, and pricing before work begins.
+        </p>
+      </details>
+
+      <details>
+        <summary>Do you require deposits?</summary>
+        <p>
+          Some projects may require a deposit before work begins. If a deposit is required, it will be stated in writing. Remaining balances are due upon completion unless otherwise agreed in writing.
+        </p>
+      </details>
+
+      <details>
+        <summary>Where do you operate?</summary>
+        <p>
+          We operate in Wisconsin with an emphasis on the Fox Valley Area. Availability outside the Fox Valley depends on scheduling, distance, and project scope.
+        </p>
+      </details>
+
+      <details>
+        <summary>What payment methods do you accept?</summary>
+        <p>
+          Payments are securely processed through Square and other approved methods as communicated in advance.
+        </p>
+      </details>
 
       <h2 id="payments">Payments</h2>
       <p>Payments are securely processed through Square after services are confirmed.</p>
