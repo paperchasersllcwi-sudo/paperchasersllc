@@ -11,128 +11,119 @@
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f3f3f3;
+      background:
+        linear-gradient(rgba(245,245,245,0.96), rgba(245,245,245,0.96)),
+        url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=60");
+      background-size: cover;
+      background-attachment: fixed;
       margin: 0;
       padding: 0;
       color: #111;
     }
 
     .container {
-      max-width: 920px;
-      margin: 40px auto;
+      max-width: 960px;
+      margin: 50px auto;
       background: #ffffff;
-      padding: 34px;
-      border-radius: 6px;
-      border: 1px solid #d9d9d9;
+      padding: 40px;
+      border-radius: 8px;
+      border: 1px solid #d0d0d0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     }
 
     .masthead {
-      padding-bottom: 14px;
-      border-bottom: 2px solid #000;
-      margin-bottom: 18px;
+      text-align: center;
+      padding-bottom: 28px;
+      border-bottom: 3px solid #1f3a5f;
+      margin-bottom: 34px;
     }
 
-    h1 {
-      margin: 0 0 6px 0;
-      font-size: 2.0em;
-      letter-spacing: 0.2px;
+    .logo {
+      max-width: 340px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 18px auto;
+      display: block;
     }
 
     .tagline {
+      font-size: 1.15em;
+      font-weight: bold;
+      letter-spacing: 0.4px;
+      color: #1f3a5f;
       margin: 0;
-      font-size: 1.02em;
     }
 
     .subline {
-      margin: 10px 0 0 0;
+      margin-top: 10px;
       font-size: 0.95em;
-      color: #333;
+      color: #444;
     }
 
     h2 {
-      margin-top: 28px;
-      margin-bottom: 10px;
+      margin-top: 36px;
+      margin-bottom: 12px;
       font-size: 1.15em;
-      letter-spacing: 0.2px;
       text-transform: uppercase;
-      border-bottom: 1px solid #000;
+      letter-spacing: 0.8px;
+      color: #1f3a5f;
+      border-bottom: 2px solid #1f3a5f;
       padding-bottom: 8px;
     }
 
     p {
       margin: 10px 0;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     ul, ol {
-      margin: 0 0 0 18px;
+      margin: 0 0 0 20px;
       padding: 0;
     }
 
     li {
       margin: 6px 0;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     a {
-      color: #111;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-
-    .nav {
-      margin: 12px 0 0 0;
-      font-size: 0.95em;
-    }
-
-    .nav a {
+      color: #1f3a5f;
       font-weight: bold;
       text-decoration: underline;
     }
 
     .notice {
-      background: #fafafa;
-      border: 1px solid #d9d9d9;
-      border-left: 6px solid #000;
-      padding: 12px 14px;
-      margin: 12px 0;
+      background: #f8f8f8;
+      border-left: 6px solid #1f3a5f;
+      border: 1px solid #d0d0d0;
+      padding: 14px 16px;
+      margin: 16px 0;
       font-size: 0.95em;
-      color: #222;
     }
 
-    .badge {
+    .payment-button a {
       display: inline-block;
-      border: 1px solid #000;
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 0.88em;
-      margin-top: 10px;
-    }
-
-    .payment-link a {
-      display: inline-block;
-      padding: 10px 14px;
-      border: 2px solid #000;
+      padding: 12px 18px;
+      border: 2px solid #1f3a5f;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      margin-top: 10px;
+      color: #1f3a5f;
     }
 
-    .payment-link a:hover {
-      text-decoration: underline;
-    }
-
-    .fineprint {
-      font-size: 0.92em;
-      color: #222;
+    .payment-button a:hover {
+      background: #1f3a5f;
+      color: #ffffff;
     }
 
     .footer {
-      margin-top: 34px;
-      padding-top: 14px;
-      border-top: 1px solid #d9d9d9;
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid #d0d0d0;
       font-size: 0.9em;
-      color: #444;
+      color: #555;
+      text-align: center;
     }
   </style>
 </head>
@@ -140,29 +131,24 @@
 <body>
   <div class="container">
     <div class="masthead">
-      <h1>Paper Chasers LLC</h1>
-      <p class="tagline"><strong>Professional support services built on accuracy, reliability, and discretion.</strong></p>
-      <p class="subline">
-        Wisconsin — with an emphasis on the Fox Valley Area
-        <span class="badge">Secure payments via Square</span>
+      <!-- LOGO -->
+      <img src="paper-chasers-logo.png" alt="Paper Chasers LLC Logo" class="logo" />
+
+      <!-- TAGLINE -->
+      <p class="tagline">
+        Professional support services built on accuracy, reliability, and discretion.
       </p>
 
-      <p class="nav">
-        <strong>Jump to:</strong>
-        <a href="#about">About</a> |
-        <a href="#services">Services</a> |
-        <a href="#how">How It Works</a> |
-        <a href="#service-area">Service Area</a> |
-        <a href="#payments">Payments</a> |
-        <a href="#scope">Scope &amp; Terms</a> |
-        <a href="#contact">Contact</a>
+      <p class="subline">
+        Wisconsin — with an emphasis on the Fox Valley Area
       </p>
     </div>
 
-    <h2 id="about">About</h2>
+    <h2>About</h2>
     <p>
-      Paper Chasers LLC provides practical, professional support for individuals, small businesses, and legal professionals.
-      We operate with a documented workflow: confirm scope, confirm timeline, execute, and deliver.
+      Paper Chasers LLC provides practical, professional support for individuals, small businesses,
+      and legal professionals. We operate using a documented workflow: confirm scope, confirm timeline,
+      execute, and deliver.
     </p>
     <p>
       <strong>Community:</strong> Paper Chasers LLC is a proud sponsor of <em>The People’s Paralegal</em>.
@@ -171,74 +157,52 @@
     <div class="notice">
       <strong>NOTICE (NO LEGAL ADVICE):</strong>
       Paper Chasers LLC is not a law firm and does not provide legal advice.
-      Any legal research or document support is administrative in nature and performed only where permitted by applicable law.
-      If legal advice is required, consult a licensed attorney.
+      Any legal research or document support is administrative in nature and performed only
+      where permitted by applicable law. Consult a licensed attorney for legal advice.
     </div>
 
-    <h2 id="services">Services</h2>
+    <h2>Services</h2>
     <ul>
-      <li><strong>Legal research and document support</strong> (administrative support; no legal advice)</li>
-      <li><strong>Process service</strong> (service of documents as permitted by law and local rules)</li>
-      <li><strong>Courier and transport services</strong> (pickup, delivery, and time-sensitive runs)</li>
-      <li><strong>General professional support services</strong> (project-based assistance)</li>
+      <li><strong>Legal research and document support</strong> (administrative only)</li>
+      <li><strong>Process service</strong> (as permitted by law and local rules)</li>
+      <li><strong>Courier and transport services</strong></li>
+      <li><strong>General professional support services</strong></li>
     </ul>
 
-    <h2 id="how">How It Works</h2>
-    <ol>
-      <li><strong>Request:</strong> Contact us with the task, timeframe, and any relevant details.</li>
-      <li><strong>Confirm:</strong> We confirm scope, timeline, and pricing before work begins (email/text acceptable).</li>
-      <li><strong>Deliver:</strong> We complete the work and provide the agreed deliverables and documentation.</li>
-    </ol>
-
-    <h2 id="service-area">Service Area</h2>
+    <h2>Payments</h2>
     <p>
-      We operate in <strong>Wisconsin</strong>, with an emphasis on the <strong>Fox Valley Area</strong>.
-      Availability for other Wisconsin locations may be provided based on scheduling, distance, and project scope.
+      Payments are securely processed through Square. Use the payment option below only after
+      services and scope have been confirmed.
     </p>
 
-    <h2 id="payments">Payments</h2>
-    <p class="fineprint">
-      Payments are securely processed through Square. Use the payment option below only after services and scope have been confirmed.
-    </p>
+    <div class="payment-button">
+      <a href="https://square.link/u/NGJZGxZJ" target="_blank" rel="noopener">
+        Make a Payment via Square
+      </a>
+    </div>
 
-    <p class="payment-link">
-      <a href="https://square.link/u/NGJZGxZJ" target="_blank" rel="noopener">Make a Payment via Square</a>
-    </p>
+    <div class="notice">
+      <strong>Deposits &amp; Balances:</strong>
+      Certain projects may require a deposit prior to commencement.
+      Any remaining balance is due upon completion unless otherwise agreed in writing.
+    </div>
 
-    <p class="notice">
-      <strong>Deposits &amp; Balances:</strong> Certain projects may require a deposit before work begins.
-      If a deposit is required, it will be stated in writing. Any remaining balance is due upon completion
-      (or as otherwise agreed in writing).
-    </p>
-
-    <h2 id="scope">Scope &amp; Terms</h2>
+    <h2>Scope &amp; Terms</h2>
     <p>
-      Services are provided on a project-based or task-based basis, with scope defined in advance whenever possible.
-      Work is limited to the services expressly agreed upon between Paper Chasers LLC and the client.
-    </p>
-    <p>
-      Requests falling outside the original scope will be identified before additional work is performed.
-      No expanded scope will be assumed without confirmation.
-    </p>
-    <p>
-      Fees, timelines, and deliverables may vary depending on the nature and urgency of the request.
-      Payment terms are communicated prior to or at the time services are rendered unless otherwise agreed.
-    </p>
-    <p>
-      Client information is handled with discretion. Reasonable care is taken to maintain confidentiality; however,
-      disclosure may occur where required by law or court order.
+      Services are provided on a project-based or task-based basis with scope defined in advance.
+      Requests outside the original scope require confirmation before work proceeds.
     </p>
     <div class="notice">
-      <strong>LIMITATION OF LIABILITY:</strong> To the fullest extent permitted by law,
-      Paper Chasers LLC’s liability for any claim arising from services provided shall be limited
+      <strong>LIMITATION OF LIABILITY:</strong>
+      To the fullest extent permitted by law, Paper Chasers LLC’s liability shall be limited
       to the amount paid for the specific service giving rise to the claim.
     </div>
 
-    <p class="fineprint">
-      For additional details, see our <a href="terms.html">Terms &amp; Conditions</a>.
+    <p>
+      Additional details are available in our <a href="terms.html">Terms &amp; Conditions</a>.
     </p>
 
-    <h2 id="contact">Contact</h2>
+    <h2>Contact</h2>
     <p>
       Email: <a href="mailto:info@paperchasersllc.com">info@paperchasersllc.com</a><br />
       Phone: (920) 572-8646
