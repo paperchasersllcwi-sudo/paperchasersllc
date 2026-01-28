@@ -112,12 +112,6 @@
       padding-bottom: 10px;
     }
 
-    h3 {
-      margin: 18px 0 10px 0;
-      font-size: 1.05em;
-      color: #1f3a5f;
-    }
-
     p {
       margin: 14px 0;
       line-height: 1.75;
@@ -139,7 +133,7 @@
       font-size: 0.95em;
     }
 
-    /* ABOUT / PRINCIPAL */
+    /* ABOUT */
     .about-grid {
       display: grid;
       grid-template-columns: 280px 1fr;
@@ -152,7 +146,6 @@
       border-radius: 12px;
       border: 1px solid #d0d0d0;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      background: #fff;
     }
 
     .about-name {
@@ -169,54 +162,18 @@
       color: #333;
     }
 
-    /* WHY CHOOSE US */
-    .choose-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 12px;
-    }
-
-    .choose-item {
-      border: 1px solid #d0d0d0;
-      border-radius: 10px;
-      padding: 18px;
-      background: #fff;
-    }
-
-    .choose-title {
-      margin: 0 0 6px 0;
-      font-weight: bold;
-    }
-
-    /* Services */
-    .services-grid {
+    /* GRIDS */
+    .services-grid,
+    .choose-grid,
+    .testimonials-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       margin-top: 16px;
     }
 
-    .service-item {
-      border: 1px solid #d0d0d0;
-      border-radius: 10px;
-      padding: 18px;
-      background: #fff;
-    }
-
-    .service-title {
-      margin: 0 0 6px 0;
-      font-weight: bold;
-    }
-
-    /* Testimonials */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 12px;
-    }
-
+    .service-item,
+    .choose-item,
     .testimonial {
       border: 1px solid #d0d0d0;
       border-radius: 10px;
@@ -231,34 +188,12 @@
     }
 
     .who {
-      margin: 10px 0 0 0;
+      margin-top: 10px;
       font-weight: bold;
-      color: #111;
       font-size: 0.95em;
+      color: #111;
     }
 
-    /* FAQ */
-    details {
-      border: 1px solid #d0d0d0;
-      border-radius: 10px;
-      padding: 14px 16px;
-      background: #fff;
-      margin: 12px 0;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-      color: #1f3a5f;
-      outline: none;
-    }
-
-    details p {
-      margin: 12px 0 0 0;
-      font-size: 1.0em;
-    }
-
-    /* Payments */
     .payment-button a {
       display: inline-block;
       padding: 16px 26px;
@@ -286,12 +221,18 @@
     }
 
     @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr; }
-      .choose-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .logo { width: 80%; }
-      .card { padding: 28px; }
+      .about-grid,
+      .services-grid,
+      .choose-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      .logo {
+        width: 80%;
+      }
+      .card {
+        padding: 28px;
+      }
     }
   </style>
 </head>
@@ -308,8 +249,7 @@
         <div class="cta">
           <strong>Request Service:</strong> Share the task, timeframe, and details. Scope and pricing are confirmed before work begins.
           <div class="cta-actions">
-            <a class="btn" href="mailto:info@paperchasersllc.com">Email Us</a>
-            <a class="btn" href="tel:+19205728646">Call Us</a>
+            <a class="btn" href="request.html">Request Service</a>
             <a class="btn" href="#payments">Make a Payment</a>
           </div>
         </div>
@@ -328,18 +268,14 @@
           <p class="about-name">Mike Winius</p>
           <p class="about-title">CEO / Owner</p>
         </div>
-
         <div>
           <p>
-            Paper Chasers LLC was established to provide reliable, detail-driven professional support
-            where accuracy, follow-through, and discretion are essential. The firm serves individuals,
-            small businesses, and legal professionals throughout Wisconsin, with a focus on the Fox Valley Area.
+            Paper Chasers LLC provides reliable, detail-driven professional support for individuals,
+            small businesses, and legal professionals throughout Wisconsin, with an emphasis on the Fox Valley Area.
           </p>
           <p>
-            Each engagement is handled directly by the principal, ensuring clear communication,
-            consistent accountability, and documented execution from start to finish.
-            Scope is confirmed in advance, expectations are clearly set, and work is completed
-            with an emphasis on correctness the first time.
+            Each engagement is handled directly by the principal to ensure clarity, accountability,
+            and documented execution from start to finish.
           </p>
           <p>
             <strong>Community:</strong> Paper Chasers LLC is a proud sponsor of <em>The People’s Paralegal</em>.
@@ -350,54 +286,13 @@
       <div class="notice">
         <strong>NOTICE (NO LEGAL ADVICE):</strong>
         Paper Chasers LLC is not a law firm and does not provide legal advice.
-        Any legal research or document support is administrative in nature and performed only
-        where permitted by applicable law.
-      </div>
-
-      <h2>Why Clients Choose Us</h2>
-      <div class="choose-grid">
-        <div class="choose-item">
-          <p class="choose-title">✅ Scope Discipline</p>
-          <p>We confirm scope, timelines, and expectations before work begins—no surprises and no assumptions.</p>
-        </div>
-        <div class="choose-item">
-          <p class="choose-title">✅ Documented Follow-Through</p>
-          <p>Clear communication and written documentation where appropriate, so progress is trackable and defensible.</p>
-        </div>
-        <div class="choose-item">
-          <p class="choose-title">✅ Discretion &amp; Professional Boundaries</p>
-          <p>Client information is handled with discretion and services are performed within professional limits.</p>
-        </div>
-        <div class="choose-item">
-          <p class="choose-title">✅ Local Reliability</p>
-          <p>Wisconsin-based service with an emphasis on the Fox Valley Area, with availability based on scope and scheduling.</p>
-        </div>
-      </div>
-
-      <h2>Services</h2>
-      <div class="services-grid">
-        <div class="service-item">
-          <p class="service-title">📄 Legal Research &amp; Document Support</p>
-          <p>Administrative support only. No legal advice.</p>
-        </div>
-        <div class="service-item">
-          <p class="service-title">📬 Process Service</p>
-          <p>Service of documents as permitted by law and local rules.</p>
-        </div>
-        <div class="service-item">
-          <p class="service-title">🚗 Courier &amp; Transport</p>
-          <p>Time-sensitive pickup and delivery services.</p>
-        </div>
-        <div class="service-item">
-          <p class="service-title">🧩 General Professional Support</p>
-          <p>Project-based assistance with defined scope.</p>
-        </div>
       </div>
 
       <h2>Client Feedback</h2>
       <p>
         Some of our client testimonials.
       </p>
+
       <div class="testimonials-grid">
         <div class="testimonial">
           <p class="quote">“Fast communication, clear scope, and exactly what was promised—delivered in a timely manner.”</p>
@@ -409,70 +304,19 @@
         </div>
         <div class="testimonial">
           <p class="quote">“No guessing, no surprises. Clear expectations with clean execution.”</p>
-          <p class="who">— Tanya N. </p>
+          <p class="who">— Tanya N.</p>
         </div>
         <div class="testimonial">
           <p class="quote">“Discreet, efficient, and organized. I would use again.”</p>
-          <p class="who">— Kevin S. </p>
+          <p class="who">— Kevin S.</p>
         </div>
       </div>
-
-      <h2>FAQ</h2>
-      <details>
-        <summary>Do you provide legal advice?</summary>
-        <p>
-          No. Paper Chasers LLC is not a law firm and does not provide legal advice. Any legal research or document support is administrative in nature and performed only where permitted by applicable law.
-        </p>
-      </details>
-
-      <details>
-        <summary>How do I start a request?</summary>
-        <p>
-          Email or call with the task, timeframe, and any relevant details. We will confirm scope, timeline, and pricing before work begins.
-        </p>
-      </details>
-
-      <details>
-        <summary>Do you require deposits?</summary>
-        <p>
-          Some projects may require a deposit before work begins. If a deposit is required, it will be stated in writing. Remaining balances are due upon completion unless otherwise agreed in writing.
-        </p>
-      </details>
-
-      <details>
-        <summary>Where do you operate?</summary>
-        <p>
-          We operate in Wisconsin with an emphasis on the Fox Valley Area. Availability outside the Fox Valley depends on scheduling, distance, and project scope.
-        </p>
-      </details>
-
-      <details>
-        <summary>What payment methods do you accept?</summary>
-        <p>
-          Payments are securely processed through Square and other approved methods as communicated in advance.
-        </p>
-      </details>
 
       <h2 id="payments">Payments</h2>
       <p>Payments are securely processed through Square after services are confirmed.</p>
       <div class="payment-button">
         <a href="https://square.link/u/NGJZGxZJ" target="_blank" rel="noopener">Make a Payment via Square</a>
       </div>
-
-      <h2>Scope &amp; Terms</h2>
-      <p>
-        Services are provided on a task-based or project-based basis. Requests outside the confirmed
-        scope require approval before work proceeds.
-      </p>
-      <p>
-        Additional details are available in our <a href="terms.html">Terms &amp; Conditions</a>.
-      </p>
-
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:info@paperchasersllc.com">info@paperchasersllc.com</a><br />
-        Phone: (920) 572-8646
-      </p>
 
       <div class="footer">
         © Paper Chasers LLC — Wisconsin
