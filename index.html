@@ -2,328 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Paper Chasers LLC | Wisconsin (Fox Valley) Professional Support Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paper Chasers LLC | Professional Support Services in Wisconsin (Fox Valley)</title>
 
-  <meta name="description" content="Paper Chasers LLC provides professional support services in Wisconsin with an emphasis on the Fox Valley Area. Discreet, reliable service. Secure payments through Square." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Paper Chasers LLC provides professional support services in Wisconsin with an emphasis on the Fox Valley Area. Reliable courier, process service, and administrative support." />
   <meta name="robots" content="index,follow" />
 
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Paper Chasers LLC",
+    "url": "https://paperchasersllc.com",
+    "logo": "https://paperchasersllc.com/paper-chasers-logo.png",
+    "image": "https://paperchasersllc.com/paper-chasers-logo.png",
+    "telephone": "+1-920-572-8646",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "WI",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Fox Valley Area, Wisconsin"
+    },
+    "description": "Professional support services including courier, process service, and administrative document support in Wisconsin with an emphasis on the Fox Valley Area.",
+    "sameAs": []
+  }
+  </script>
+
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f3f3f3;
-      margin: 0;
-      padding: 0;
-      color: #111;
-    }
-
-    .hero {
-      background:
-        linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
-        url("hero.jpg");
-      background-size: cover;
-      background-position: center;
-      padding: 46px 18px 26px 18px;
-      border-bottom: 4px solid #1f3a5f;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .masthead {
-      text-align: center;
-      padding-bottom: 22px;
-    }
-
-    .logo {
-      width: 50%;
-      max-width: 540px;
-      min-width: 300px;
-      height: auto;
-      margin: 0 auto 18px auto;
-      display: block;
-    }
-
-    .tagline {
-      font-size: 1.2em;
-      font-weight: bold;
-      letter-spacing: 0.4px;
-      color: #1f3a5f;
-      margin: 0;
-    }
-
-    .subline {
-      margin-top: 10px;
-      font-size: 1.0em;
-      color: #333;
-    }
-
-    .cta {
-      margin: 22px auto 0 auto;
-      max-width: 860px;
-      background: rgba(255,255,255,0.95);
-      border: 1px solid #d0d0d0;
-      border-left: 6px solid #2c7a3f;
-      border-radius: 8px;
-      padding: 16px 18px;
-      text-align: center;
-    }
-
-    .cta-actions {
-      margin-top: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 16px;
-      margin: 6px;
-      border-radius: 6px;
-      border: 2px solid #1f3a5f;
-      text-decoration: none;
-      font-weight: bold;
-      color: #1f3a5f;
-      background: #fff;
-    }
-
-    .btn:hover {
-      background: #1f3a5f;
-      color: #fff;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #d0d0d0;
-      border-radius: 12px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-      padding: 44px;
-      margin: 30px auto 60px auto;
-    }
-
-    h2 {
-      margin-top: 0;
-      margin-bottom: 18px;
-      font-size: 1.3em;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #1f3a5f;
-      border-bottom: 3px solid #1f3a5f;
-      padding-bottom: 10px;
-    }
-
-    p {
-      margin: 14px 0;
-      line-height: 1.75;
-      font-size: 1.02em;
-    }
-
-    a {
-      color: #1f3a5f;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    .notice {
-      background: #f8f8f8;
-      border-left: 6px solid #1f3a5f;
-      border: 1px solid #d0d0d0;
-      padding: 18px 20px;
-      margin: 24px 0;
-      font-size: 0.95em;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 32px;
-      align-items: flex-start;
-    }
-
-    .about-photo {
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid #d0d0d0;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-
-    .about-name {
-      margin: 16px 0 4px 0;
-      font-size: 1.1em;
-      font-weight: bold;
-    }
-
-    .about-title {
-      margin: 0;
-      font-size: 0.95em;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      color: #333;
-    }
-
-    /* GRIDS */
-    .services-grid,
-    .choose-grid,
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 16px;
-    }
-
-    .service-item,
-    .choose-item,
-    .testimonial {
-      border: 1px solid #d0d0d0;
-      border-radius: 10px;
-      padding: 18px;
-      background: #fff;
-    }
-
-    .quote {
-      margin: 0;
-      font-style: italic;
-      color: #222;
-    }
-
-    .who {
-      margin-top: 10px;
-      font-weight: bold;
-      font-size: 0.95em;
-      color: #111;
-    }
-
-    .payment-button a {
-      display: inline-block;
-      padding: 16px 26px;
-      border: 2px solid #1f3a5f;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 12px;
-      color: #1f3a5f;
-      background: #fff;
-    }
-
-    .payment-button a:hover {
-      background: #1f3a5f;
-      color: #ffffff;
-    }
-
-    .footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid #d0d0d0;
-      font-size: 0.9em;
-      color: #555;
-      text-align: center;
-    }
-
-    @media (max-width: 900px) {
-      .about-grid,
-      .services-grid,
-      .choose-grid,
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
-      .logo {
-        width: 80%;
-      }
-      .card {
-        padding: 28px;
-      }
-    }
+    body{font-family:Arial,Helvetica,sans-serif;background:#f3f3f3;margin:0;padding:0;color:#111;}
+    .hero{background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),url("hero.jpg");background-size:cover;background-position:center;padding:46px 18px 26px;border-bottom:4px solid #1f3a5f;}
+    .container{max-width:1000px;margin:0 auto;}
+    .masthead{text-align:center;padding-bottom:22px;}
+    .logo{width:50%;max-width:540px;min-width:300px;height:auto;margin:0 auto 18px;display:block;}
+    .tagline{font-size:1.2em;font-weight:bold;letter-spacing:.4px;color:#1f3a5f;margin:0;}
+    .subline{margin-top:10px;font-size:1em;color:#333;}
+    .cta{margin:22px auto 0;max-width:860px;background:rgba(255,255,255,.95);border:1px solid #d0d0d0;border-left:6px solid #2c7a3f;border-radius:8px;padding:16px 18px;text-align:center;}
+    .btn{display:inline-block;padding:12px 16px;margin:6px;border-radius:6px;border:2px solid #1f3a5f;text-decoration:none;font-weight:bold;color:#1f3a5f;background:#fff;}
+    .btn:hover{background:#1f3a5f;color:#fff;}
+    .card{background:#fff;border:1px solid #d0d0d0;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.06);padding:44px;margin:30px auto 60px;}
+    h2{text-transform:uppercase;letter-spacing:1px;color:#1f3a5f;border-bottom:3px solid #1f3a5f;padding-bottom:10px;}
+    p{margin:14px 0;line-height:1.75;font-size:1.02em;}
+    .footer{margin-top:60px;padding-top:20px;border-top:1px solid #d0d0d0;font-size:.9em;color:#555;text-align:center;}
+    @media(max-width:900px){.logo{width:80%}.card{padding:28px}}
   </style>
 </head>
 
 <body>
 
-  <div class="hero">
-    <div class="container">
-      <div class="masthead">
-        <img src="paper-chasers-logo.png" alt="Paper Chasers LLC Logo" class="logo" />
-        <p class="tagline">Professional support services built on accuracy, reliability, and discretion.</p>
-        <p class="subline">Wisconsin — with an emphasis on the Fox Valley Area</p>
-
-        <div class="cta">
-          <strong>Request Service:</strong> Share the task, timeframe, and details. Scope and pricing are confirmed before work begins.
-          <div class="cta-actions">
-            <a class="btn" href="request.html">Request Service</a>
-            <a class="btn" href="#payments">Make a Payment</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+<div class="hero">
   <div class="container">
-    <div class="card">
-
-      <h2>About</h2>
-
-      <div class="about-grid">
-        <div>
-          <img src="mike-winius.jpg" alt="Mike Winius" class="about-photo" />
-          <p class="about-name">Mike Winius</p>
-          <p class="about-title">CEO / Owner</p>
-        </div>
-        <div>
-          <p>
-            Paper Chasers LLC provides reliable, detail-driven professional support for individuals,
-            small businesses, and legal professionals throughout Wisconsin, with an emphasis on the Fox Valley Area.
-          </p>
-          <p>
-            Each engagement is handled directly by the principal to ensure clarity, accountability,
-            and documented execution from start to finish.
-          </p>
-          <p>
-            <strong>Community:</strong> Paper Chasers LLC is a proud sponsor of <em>The People’s Paralegal</em>.
-          </p>
-        </div>
-      </div>
-
-      <div class="notice">
-        <strong>NOTICE (NO LEGAL ADVICE):</strong>
-        Paper Chasers LLC is not a law firm and does not provide legal advice.
-      </div>
-
-      <h2>Client Feedback</h2>
-      <p>
-        Some of our client testimonials.
-      </p>
-
-      <div class="testimonials-grid">
-        <div class="testimonial">
-          <p class="quote">“Fast communication, clear scope, and exactly what was promised—delivered in a timely manner.”</p>
-          <p class="who">— SUBdued Entertainment, Small Business Client (Fox Valley)</p>
-        </div>
-        <div class="testimonial">
-          <p class="quote">“Detail-oriented and reliable. Everything was documented and handled professionally.”</p>
-          <p class="who">— AL, Professional Services Client (Wisconsin)</p>
-        </div>
-        <div class="testimonial">
-          <p class="quote">“No guessing, no surprises. Clear expectations with clean execution.”</p>
-          <p class="who">— Tanya N.</p>
-        </div>
-        <div class="testimonial">
-          <p class="quote">“Discreet, efficient, and organized. I would use again.”</p>
-          <p class="who">— Kevin S.</p>
-        </div>
-      </div>
-
-      <h2 id="payments">Payments</h2>
-      <p>Payments are securely processed through Square after services are confirmed.</p>
-      <div class="payment-button">
-        <a href="https://square.link/u/NGJZGxZJ" target="_blank" rel="noopener">Make a Payment via Square</a>
-      </div>
-
-      <div class="footer">
-        © Paper Chasers LLC — Wisconsin
-      </div>
-
-    </div>
-  </div>
-
-</body>
-</html>
+    <div class="masthead">
+      <img src="paper-chasers-logo.png" alt="Paper Chasers LLC Logo" class="logo" />
+      <p class="tagline">Prof
