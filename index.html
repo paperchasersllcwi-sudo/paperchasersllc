@@ -44,20 +44,43 @@
     .btn-dark{border-color:#1f3a5f;color:#1f3a5f;}
     .btn-dark:hover{background:#1f3a5f;color:#fff;}
 
-    /* Hero */
+    /* Hero (Backdrop is hero.jpg as requested) */
     .hero{
       background:
         linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.92)),
-        url("hero-legal.jpg"); /* CHANGED: was hero.jpg */
+        url("hero.jpg");
       background-size:cover;
       background-position:center;
       border-bottom:4px solid #1f3a5f;
       padding:46px 0 36px;
     }
-    .hero-center{text-align:center;}
+
+    .hero-inner{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    /* Left header photo (hero-legal.jpg) */
+    .hero-left{
+      flex:0 0 220px;
+      max-width:220px;
+    }
+    .hero-left img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+      border:1px solid #d0d0d0;
+      box-shadow:0 10px 24px rgba(0,0,0,.10);
+      background:#fff;
+    }
+
+    .hero-center{flex:1;text-align:center;}
     .logo{width:50%;max-width:560px;min-width:280px;height:auto;display:block;margin:0 auto 14px;}
     .headline{font-size:1.25em;font-weight:bold;color:#1f3a5f;margin:10px 0;}
     .subline{font-size:1em;color:#333;margin:6px 0 18px;}
+
     .hero-box{
       max-width:900px;margin:0 auto;background:#fff;border:1px solid #d0d0d0;border-left:6px solid #2c7a3f;
       border-radius:10px;padding:18px 18px 16px;box-shadow:0 8px 20px rgba(0,0,0,0.08);
@@ -83,7 +106,15 @@
     .tile h3{margin:0 0 8px;font-size:1.02em;color:#111;}
     .tile p{margin:0;color:#333;font-size:0.96em;line-height:1.6;}
 
-    /* NEW: Photo Gallery */
+    /* Downloads */
+    .downloads-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:12px;}
+    .dl-item{border:1px solid #d0d0d0;border-radius:10px;padding:16px;background:#fff;}
+    .dl-title{margin:0 0 10px;font-weight:bold;color:#111;}
+    .dl-links{display:flex;gap:14px;flex-wrap:wrap;}
+    .dl-links a{text-decoration:none;}
+    .dl-links a:hover{text-decoration:underline;}
+
+    /* Gallery */
     .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px;}
     .gallery-img{
       width:100%;
@@ -111,8 +142,12 @@
       .grid-3{grid-template-columns:1fr;}
       .testimonials-grid{grid-template-columns:1fr;}
       .gallery-grid{grid-template-columns:1fr;}
+      .downloads-grid{grid-template-columns:1fr;}
       .logo{width:80%;}
       .card{padding:24px;}
+      .hero-inner{flex-direction:column;align-items:stretch;}
+      .hero-left{max-width:340px;width:100%;}
+      .hero-center{text-align:center;}
     }
   </style>
 </head>
@@ -147,29 +182,39 @@
   <!-- Hero -->
   <div class="hero">
     <div class="container">
-      <div class="hero-center">
-        <img src="paper-chasers-logo.png" alt="Paper Chasers LLC Logo" class="logo" />
+      <div class="hero-inner">
 
-        <div class="headline">Professional support services built on accuracy, reliability, and discretion.</div>
-        <div class="subline">Serving Wisconsin — with an emphasis on the Fox Valley Area</div>
+        <!-- LEFT HEADER PHOTO (hero-legal.jpg) -->
+        <div class="hero-left">
+          <img src="hero-legal.jpg" alt="Paper Chasers LLC - Professional Support Services" />
+        </div>
 
-        <div class="hero-box">
-          <strong>How we operate:</strong> Confirm scope → confirm timeline → execute → deliver.
-          No guessing. No surprises. Documented follow-through.
+        <!-- EXISTING HERO CONTENT -->
+        <div class="hero-center">
+          <img src="paper-chasers-logo.png" alt="Paper Chasers LLC Logo" class="logo" />
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="request.html">Request Service</a>
-            <a class="btn btn-dark" href="tel:+19204005908">Call Us</a>
-            <a class="btn btn-dark" href="sms:+19204005908">Text Us</a>
-            <a class="btn" href="fees.html">Fees</a>
-            <a class="btn" href="terms.html">Terms</a>
-            <a class="btn" href="privacy.html">Privacy</a>
-          </div>
+          <div class="headline">Professional support services built on accuracy, reliability, and discretion.</div>
+          <div class="subline">Serving Wisconsin — with an emphasis on the Fox Valley Area</div>
 
-          <div class="hero-contactline">
-            <strong>Call or Text:</strong> (920) 400-5908
+          <div class="hero-box">
+            <strong>How we operate:</strong> Confirm scope → confirm timeline → execute → deliver.
+            No guessing. No surprises. Documented follow-through.
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="request.html">Request Service</a>
+              <a class="btn btn-dark" href="tel:+19204005908">Call Us</a>
+              <a class="btn btn-dark" href="sms:+19204005908">Text Us</a>
+              <a class="btn" href="fees.html">Fees</a>
+              <a class="btn" href="terms.html">Terms</a>
+              <a class="btn" href="privacy.html">Privacy</a>
+            </div>
+
+            <div class="hero-contactline">
+              <strong>Call or Text:</strong> (920) 400-5908
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -264,7 +309,73 @@
     </div>
   </div>
 
-  <!-- ONLY ADDITION: Photo Gallery -->
+  <!-- NEW: DOWNLOADS (between Services and In The Field) -->
+  <div class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="card">
+        <h2>Downloads</h2>
+        <p>Click to download Word or PDF versions of key documents.</p>
+
+        <div class="downloads-grid">
+
+          <div class="dl-item">
+            <p class="dl-title">Comprehensive Rate Sheet</p>
+            <div class="dl-links">
+              <a href="Paper_Chasers_LLC_Final_Comprehensive_Rate_Sheet.docx">Word (.docx)</a>
+              <a href="Paper_Chasers_LLC_Final_Comprehensive_Rate_Sheet.pdf">PDF</a>
+            </div>
+          </div>
+
+          <div class="dl-item">
+            <p class="dl-title">Wisconsin Clemency Intake Questionnaire</p>
+            <div class="dl-links">
+              <a href="Paper_Chasers_LLC_WI_Clemency_Intake_Form.docx">Word (.docx)</a>
+              <a href="Paper_Chasers_LLC_WI_Clemency_Intake_Form.pdf">PDF</a>
+            </div>
+          </div>
+
+          <div class="dl-item">
+            <p class="dl-title">Client Submission Checklist</p>
+            <div class="dl-links">
+              <a href="Paper_Chasers_Client_Submission_Checklist.docx">Word (.docx)</a>
+              <a href="Paper_Chasers_Client_Submission_Checklist.pdf">PDF</a>
+            </div>
+          </div>
+
+          <div class="dl-item">
+            <p class="dl-title">Internal Intake Checklist</p>
+            <div class="dl-links">
+              <a href="Paper_Chasers_Internal_Intake_Checklist.docx">Word (.docx)</a>
+              <a href="Paper_Chasers_Internal_Intake_Checklist.pdf">PDF</a>
+            </div>
+          </div>
+
+          <div class="dl-item">
+            <p class="dl-title">Clemency Marketing Sheet</p>
+            <div class="dl-links">
+              <a href="Paper_Chasers_LLC_Clemency_Marketing_Sheet.docx">Word (.docx)</a>
+              <a href="Paper_Chasers_LLC_Clemency_Marketing_Sheet.pdf">PDF</a>
+            </div>
+          </div>
+
+          <div class="dl-item">
+            <p class="dl-title">One-Page Marketing Summary</p>
+            <div class="dl-links">
+              <a href="Paper_Chasers_LLC_One_Page_Marketing_Summary.docx">Word (.docx)</a>
+              <a href="Paper_Chasers_LLC_One_Page_Marketing_Summary.pdf">PDF</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="notice" style="margin-top:18px;">
+          If any download link doesn’t work, it’s always a filename match issue (case-sensitive). Keep filenames lowercase where possible.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- In The Field (kept; uses gallery files) -->
   <div class="section" style="padding-top:0;">
     <div class="container">
       <div class="card">
