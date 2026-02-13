@@ -44,7 +44,7 @@
     .btn-dark{border-color:#1f3a5f;color:#1f3a5f;}
     .btn-dark:hover{background:#1f3a5f;color:#fff;}
 
-    /* Hero (Backdrop is hero.jpg as requested) */
+    /* Hero (backdrop reverted to hero.jpg) */
     .hero{
       background:
         linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.92)),
@@ -55,17 +55,8 @@
       padding:46px 0 36px;
     }
 
-    .hero-inner{
-      display:flex;
-      align-items:center;
-      gap:18px;
-    }
-
-    /* Left header photo (hero-legal.jpg) */
-    .hero-left{
-      flex:0 0 220px;
-      max-width:220px;
-    }
+    .hero-inner{display:flex;align-items:center;gap:18px;}
+    .hero-left{flex:0 0 220px;max-width:220px;}
     .hero-left img{
       width:100%;
       height:auto;
@@ -80,7 +71,6 @@
     .logo{width:50%;max-width:560px;min-width:280px;height:auto;display:block;margin:0 auto 14px;}
     .headline{font-size:1.25em;font-weight:bold;color:#1f3a5f;margin:10px 0;}
     .subline{font-size:1em;color:#333;margin:6px 0 18px;}
-
     .hero-box{
       max-width:900px;margin:0 auto;background:#fff;border:1px solid #d0d0d0;border-left:6px solid #2c7a3f;
       border-radius:10px;padding:18px 18px 16px;box-shadow:0 8px 20px rgba(0,0,0,0.08);
@@ -184,7 +174,7 @@
     <div class="container">
       <div class="hero-inner">
 
-        <!-- LEFT HEADER PHOTO (hero-legal.jpg) -->
+        <!-- LEFT HEADER PHOTO -->
         <div class="hero-left">
           <img src="hero-legal.jpg" alt="Paper Chasers LLC - Professional Support Services" />
         </div>
@@ -309,7 +299,7 @@
     </div>
   </div>
 
-  <!-- NEW: DOWNLOADS (between Services and In The Field) -->
+  <!-- Downloads (ONLY CHANGE HERE IS docs/ paths for filenames) -->
   <div class="section" style="padding-top:0;">
     <div class="container">
       <div class="card">
@@ -321,61 +311,58 @@
           <div class="dl-item">
             <p class="dl-title">Comprehensive Rate Sheet</p>
             <div class="dl-links">
-              <a href="Paper_Chasers_LLC_Final_Comprehensive_Rate_Sheet.docx">Word (.docx)</a>
-              <a href="Paper_Chasers_LLC_Final_Comprehensive_Rate_Sheet.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_LLC_Final_Comprehensive_Rate_Sheet.docx">Word (.docx)</a>
+              <a href="docs/Paper_Chasers_LLC_Final_Comprehensive_Rate_Sheet.pdf">PDF</a>
             </div>
           </div>
 
           <div class="dl-item">
             <p class="dl-title">Wisconsin Clemency Intake Questionnaire</p>
             <div class="dl-links">
-              <a href="Paper_Chasers_LLC_WI_Clemency_Intake_Form.docx">Word (.docx)</a>
-              <a href="Paper_Chasers_LLC_WI_Clemency_Intake_Form.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_LLC_WI_Clemency_Intake_Form.docx">Word (.docx)</a>
+              <a href="docs/Paper_Chasers_LLC_WI_Clemency_Intake_Form.pdf">PDF</a>
             </div>
           </div>
 
           <div class="dl-item">
             <p class="dl-title">Client Submission Checklist</p>
             <div class="dl-links">
-              <a href="Paper_Chasers_Client_Submission_Checklist.docx">Word (.docx)</a>
-              <a href="Paper_Chasers_Client_Submission_Checklist.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_Client_Submission_Checklist.docx">Word (.docx)</a>
+              <a href="docs/Paper_Chasers_Client_Submission_Checklist.pdf">PDF</a>
             </div>
           </div>
 
           <div class="dl-item">
             <p class="dl-title">Internal Intake Checklist</p>
             <div class="dl-links">
-              <a href="Paper_Chasers_Internal_Intake_Checklist.docx">Word (.docx)</a>
-              <a href="Paper_Chasers_Internal_Intake_Checklist.pdf">PDF</a>
-            </div>
-          </div>
-
-          <div class="dl-item">
-            <p class="dl-title">Clemency Marketing Sheet</p>
-            <div class="dl-links">
-              <a href="Paper_Chasers_LLC_Clemency_Marketing_Sheet.docx">Word (.docx)</a>
-              <a href="Paper_Chasers_LLC_Clemency_Marketing_Sheet.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_Internal_Intake_Checklist.docx">Word (.docx)</a>
+              <a href="docs/Paper_Chasers_Internal_Intake_Checklist.pdf">PDF</a>
             </div>
           </div>
 
           <div class="dl-item">
             <p class="dl-title">One-Page Marketing Summary</p>
             <div class="dl-links">
-              <a href="Paper_Chasers_LLC_One_Page_Marketing_Summary.docx">Word (.docx)</a>
-              <a href="Paper_Chasers_LLC_One_Page_Marketing_Summary.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_LLC_One_Page_Marketing_Summary.docx">Word (.docx)</a>
+              <a href="docs/Paper_Chasers_LLC_One_Page_Marketing_Summary.pdf">PDF</a>
+            </div>
+          </div>
+
+          <div class="dl-item">
+            <p class="dl-title">Clemency Marketing Sheet</p>
+            <div class="dl-links">
+              <a href="docs/Paper_Chasers_LLC_Clemency_Marketing_Sheet.docx">Word (.docx)</a>
+              <a href="docs/Paper_Chasers_LLC_Clemency_Marketing_Sheet.pdf">PDF</a>
             </div>
           </div>
 
         </div>
 
-        <div class="notice" style="margin-top:18px;">
-          If any download link doesn’t work, it’s always a filename match issue (case-sensitive). Keep filenames lowercase where possible.
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- In The Field (kept; uses gallery files) -->
+  <!-- In The Field -->
   <div class="section" style="padding-top:0;">
     <div class="container">
       <div class="card">
