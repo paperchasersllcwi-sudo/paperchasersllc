@@ -2,12 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Paper Chasers LLC | Professional Support Services in Wisconsin (Fox Valley)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Paper Chasers LLC provides professional support services in Wisconsin with an emphasis on the Fox Valley Area. Courier, process service, and administrative document support built on accuracy, reliability, and discretion." />
-  <meta name="robots" content="index,follow" />
 
-  <!-- Local Business Schema -->
+  <!-- Primary SEO -->
+  <title>Paper Chasers LLC | Process Service, Courier & Document Support | Fox Valley, Wisconsin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Paper Chasers LLC provides fast, documented professional support services across Wisconsin—focused on the Fox Valley. Process service, courier delivery, administrative document support, and Wisconsin clemency intake support. Call or text (920) 400-5908." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://paperchasersllc.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:site_name" content="Paper Chasers LLC" />
+  <meta property="og:title" content="Paper Chasers LLC | Process Service, Courier & Document Support | Fox Valley, WI" />
+  <meta property="og:description" content="Process service, courier delivery, administrative document support, and Wisconsin clemency intake support. Serving Wisconsin with emphasis on the Fox Valley. Call/Text (920) 400-5908." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://paperchasersllc.com/" />
+  <meta property="og:image" content="https://paperchasersllc.com/paper-chasers-logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Paper Chasers LLC | Fox Valley, Wisconsin" />
+  <meta name="twitter:description" content="Process service, courier delivery, document support, and clemency intake support. Call/Text (920) 400-5908." />
+  <meta name="twitter:image" content="https://paperchasersllc.com/paper-chasers-logo.png" />
+
+  <!-- Enhanced Local Business Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -15,10 +31,39 @@
     "name": "Paper Chasers LLC",
     "url": "https://paperchasersllc.com",
     "logo": "https://paperchasersllc.com/paper-chasers-logo.png",
+    "image": [
+      "https://paperchasersllc.com/hero-legal.jpg",
+      "https://paperchasersllc.com/gallery-1.jpg",
+      "https://paperchasersllc.com/gallery-2.jpg",
+      "https://paperchasersllc.com/gallery-3.jpg"
+    ],
     "telephone": "+1-920-400-5908",
-    "address": { "@type": "PostalAddress", "addressRegion": "WI", "addressCountry": "US" },
-    "areaServed": "Fox Valley Area, Wisconsin",
-    "description": "Professional support services including courier, process service, and administrative document support in Wisconsin with an emphasis on the Fox Valley Area."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Fox Valley",
+      "addressRegion": "WI",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      "Appleton, WI",
+      "Kaukauna, WI",
+      "Neenah, WI",
+      "Menasha, WI",
+      "Oshkosh, WI",
+      "Fox Valley, Wisconsin",
+      "Wisconsin"
+    ],
+    "description": "Professional support services across Wisconsin with emphasis on the Fox Valley: process service, courier delivery, administrative document support, and Wisconsin clemency intake support.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Paper Chasers Services",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Process Service","areaServed":"Wisconsin"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Courier & Time-Sensitive Delivery","areaServed":"Wisconsin"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Administrative Document Support","areaServed":"Wisconsin"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Wisconsin Clemency Intake Support","areaServed":"Wisconsin"}}
+      ]
+    }
   }
   </script>
 
@@ -44,7 +89,7 @@
     .btn-dark{border-color:#1f3a5f;color:#1f3a5f;}
     .btn-dark:hover{background:#1f3a5f;color:#fff;}
 
-    /* Hero (backdrop reverted to hero.jpg) */
+    /* Hero (Backdrop restored to hero.jpg) */
     .hero{
       background:
         linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.92)),
@@ -55,8 +100,19 @@
       padding:46px 0 36px;
     }
 
-    .hero-inner{display:flex;align-items:center;gap:18px;}
-    .hero-left{flex:0 0 220px;max-width:220px;}
+    /* Hero layout: left photo + center content */
+    .hero-inner{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    /* Move hero-legal.jpg ~2 inches left on desktop */
+    .hero-left{
+      flex:0 0 240px;
+      max-width:240px;
+      margin-left:-180px; /* ~2 inches */
+    }
     .hero-left img{
       width:100%;
       height:auto;
@@ -71,6 +127,10 @@
     .logo{width:50%;max-width:560px;min-width:280px;height:auto;display:block;margin:0 auto 14px;}
     .headline{font-size:1.25em;font-weight:bold;color:#1f3a5f;margin:10px 0;}
     .subline{font-size:1em;color:#333;margin:6px 0 18px;}
+
+    /* SEO-friendly H1 (same look) */
+    h1.headline{font-size:1.25em;font-weight:bold;color:#1f3a5f;margin:10px 0;}
+
     .hero-box{
       max-width:900px;margin:0 auto;background:#fff;border:1px solid #d0d0d0;border-left:6px solid #2c7a3f;
       border-radius:10px;padding:18px 18px 16px;box-shadow:0 8px 20px rgba(0,0,0,0.08);
@@ -96,7 +156,7 @@
     .tile h3{margin:0 0 8px;font-size:1.02em;color:#111;}
     .tile p{margin:0;color:#333;font-size:0.96em;line-height:1.6;}
 
-    /* Downloads */
+    /* Downloads (PDF-only) */
     .downloads-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:12px;}
     .dl-item{border:1px solid #d0d0d0;border-radius:10px;padding:16px;background:#fff;}
     .dl-title{margin:0 0 10px;font-weight:bold;color:#111;}
@@ -136,7 +196,7 @@
       .logo{width:80%;}
       .card{padding:24px;}
       .hero-inner{flex-direction:column;align-items:stretch;}
-      .hero-left{max-width:340px;width:100%;}
+      .hero-left{max-width:340px;width:100%;margin-left:0;} /* reset on mobile */
       .hero-center{text-align:center;}
     }
   </style>
@@ -174,16 +234,16 @@
     <div class="container">
       <div class="hero-inner">
 
-        <!-- LEFT HEADER PHOTO -->
+        <!-- Left header photo -->
         <div class="hero-left">
-          <img src="hero-legal.jpg" alt="Paper Chasers LLC - Professional Support Services" />
+          <img src="hero-legal.jpg" alt="Paper Chasers LLC in Wisconsin - professional legal support backdrop" />
         </div>
 
-        <!-- EXISTING HERO CONTENT -->
+        <!-- Hero content -->
         <div class="hero-center">
           <img src="paper-chasers-logo.png" alt="Paper Chasers LLC Logo" class="logo" />
 
-          <div class="headline">Professional support services built on accuracy, reliability, and discretion.</div>
+          <h1 class="headline">Process Service, Courier Delivery & Professional Document Support — Fox Valley, Wisconsin</h1>
           <div class="subline">Serving Wisconsin — with an emphasis on the Fox Valley Area</div>
 
           <div class="hero-box">
@@ -299,65 +359,67 @@
     </div>
   </div>
 
-  <!-- Downloads (ONLY CHANGE HERE IS docs/ paths for filenames) -->
+  <!-- Downloads (PDF only + ZIP) -->
   <div class="section" style="padding-top:0;">
     <div class="container">
       <div class="card">
         <h2>Downloads</h2>
-        <p>Click to download Word or PDF versions of key documents.</p>
+        <p>Click to download PDF versions of key documents.</p>
+
+        <div class="notice" style="margin-top:12px;">
+          <strong>Download Everything:</strong>
+          <a href="docs/Paper_Chasers_PDF_Downloads.zip">PDF Pack (ZIP)</a>
+        </div>
 
         <div class="downloads-grid">
 
           <div class="dl-item">
-            <p class="dl-title">Comprehensive Rate Sheet</p>
+            <p class="dl-title">Comprehensive Rate Sheet (PDF)</p>
             <div class="dl-links">
-              <a href="docs/Paper_Chasers_LLC_Final_Comprehensive_Rate_Sheet.docx">Word (.docx)</a>
-              <a href="docs/Paper_Chasers_LLC_Final_Comprehensive_Rate_Sheet.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_LLC_Final_Comprehensive_Rate_Sheet.pdf">Download PDF</a>
             </div>
           </div>
 
           <div class="dl-item">
-            <p class="dl-title">Wisconsin Clemency Intake Questionnaire</p>
+            <p class="dl-title">Wisconsin Clemency Intake Questionnaire (PDF)</p>
             <div class="dl-links">
-              <a href="docs/Paper_Chasers_LLC_WI_Clemency_Intake_Form.docx">Word (.docx)</a>
-              <a href="docs/Paper_Chasers_LLC_WI_Clemency_Intake_Form.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_LLC_WI_Clemency_Intake_Form.pdf">Download PDF</a>
             </div>
           </div>
 
           <div class="dl-item">
-            <p class="dl-title">Client Submission Checklist</p>
+            <p class="dl-title">Client Submission Checklist (PDF)</p>
             <div class="dl-links">
-              <a href="docs/Paper_Chasers_Client_Submission_Checklist.docx">Word (.docx)</a>
-              <a href="docs/Paper_Chasers_Client_Submission_Checklist.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_Client_Submission_Checklist.pdf">Download PDF</a>
             </div>
           </div>
 
           <div class="dl-item">
-            <p class="dl-title">Internal Intake Checklist</p>
+            <p class="dl-title">Internal Intake Checklist (PDF)</p>
             <div class="dl-links">
-              <a href="docs/Paper_Chasers_Internal_Intake_Checklist.docx">Word (.docx)</a>
-              <a href="docs/Paper_Chasers_Internal_Intake_Checklist.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_Internal_Intake_Checklist.pdf">Download PDF</a>
             </div>
           </div>
 
           <div class="dl-item">
-            <p class="dl-title">One-Page Marketing Summary</p>
+            <p class="dl-title">One-Page Marketing Summary (PDF)</p>
             <div class="dl-links">
-              <a href="docs/Paper_Chasers_LLC_One_Page_Marketing_Summary.docx">Word (.docx)</a>
-              <a href="docs/Paper_Chasers_LLC_One_Page_Marketing_Summary.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_LLC_One_Page_Marketing_Summary.pdf">Download PDF</a>
             </div>
           </div>
 
           <div class="dl-item">
-            <p class="dl-title">Clemency Marketing Sheet</p>
+            <p class="dl-title">Clemency Marketing Sheet (PDF)</p>
             <div class="dl-links">
-              <a href="docs/Paper_Chasers_LLC_Clemency_Marketing_Sheet.docx">Word (.docx)</a>
-              <a href="docs/Paper_Chasers_LLC_Clemency_Marketing_Sheet.pdf">PDF</a>
+              <a href="docs/Paper_Chasers_LLC_Clemency_Marketing_Sheet.pdf">Download PDF</a>
             </div>
           </div>
 
         </div>
 
+        <div class="notice" style="margin-top:18px;">
+          Tip: If a link ever breaks, it’s always a filename mismatch (case-sensitive). Keep filenames consistent.
+        </div>
       </div>
     </div>
   </div>
@@ -370,9 +432,9 @@
         <p>Real work. Real follow-through.</p>
 
         <div class="gallery-grid">
-          <img class="gallery-img" src="gallery-1.jpg" alt="Paper Chasers LLC - Photo 1" />
-          <img class="gallery-img" src="gallery-2.jpg" alt="Paper Chasers LLC - Photo 2" />
-          <img class="gallery-img" src="gallery-3.jpg" alt="Paper Chasers LLC - Photo 3" />
+          <img class="gallery-img" src="gallery-1.jpg" alt="Paper Chasers LLC courier and field work photo 1" />
+          <img class="gallery-img" src="gallery-2.jpg" alt="Paper Chasers LLC courier and field work photo 2" />
+          <img class="gallery-img" src="gallery-3.jpg" alt="Paper Chasers LLC courier and field work photo 3" />
         </div>
       </div>
     </div>
@@ -415,7 +477,7 @@
 
         <div class="grid-2">
           <div class="tile" style="text-align:center;">
-            <img src="mike.jpg" alt="Mike Winius" style="width:100%;max-width:320px;border-radius:10px;border:1px solid #d0d0d0;" />
+            <img src="mike.jpg" alt="Mike Winius - Owner of Paper Chasers LLC" style="width:100%;max-width:320px;border-radius:10px;border:1px solid #d0d0d0;" />
             <p style="margin:12px 0 0;"><strong>Mike Winius</strong></p>
             <p style="margin:6px 0 0;color:#333;">CEO/Owner</p>
             <p style="margin:10px 0 0;">
