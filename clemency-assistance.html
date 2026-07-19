@@ -3,61 +3,346 @@
 <head>
   <meta charset="UTF-8" />
 
-  <title>Wisconsin Clemency, Pardons & Expungement Support | Paper Chasers LLC</title>
+  <title>Wisconsin Pardon Application Support | Paper Chasers LLC</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Paper Chasers LLC helps with Wisconsin clemency, pardon application preparation, document organization, personal statement support, and expungement-related paperwork assistance. Serving Appleton, Fox Valley, and Wisconsin. Call or text (920) 572-8646." />
+
+  <meta
+    name="description"
+    content="Paper Chasers LLC provides administrative support for Wisconsin pardon applications, including document organization, personal statement preparation, application review, and packet assembly. Serving Appleton, the Fox Valley, and Wisconsin. Call or text (920) 572-8646."
+  />
+
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://paperchasersllc.com/clemency-assistance.html" />
+
+  <link
+    rel="canonical"
+    href="https://paperchasersllc.com/clemency-assistance.html"
+  />
 
   <style>
-    body{font-family:Arial,Helvetica,sans-serif;background:#f3f3f3;margin:0;padding:0;color:#111;}
-    a{color:#1f3a5f;text-decoration:underline;font-weight:bold;}
-    .container{max-width:1100px;margin:0 auto;padding:0 18px;}
-    .topbar{background:#fff;border-bottom:1px solid #d0d0d0;}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:14px;flex-wrap:wrap;}
-    .nav-links{display:flex;gap:14px;flex-wrap:wrap;}
-    .nav-links a{text-decoration:none;font-weight:bold;}
-    .btn{display:inline-block;padding:11px 14px;border-radius:7px;border:2px solid #1f3a5f;background:#fff;color:#1f3a5f;text-decoration:none;font-weight:bold;}
-    .btn:hover{background:#1f3a5f;color:#fff;}
-    .btn-primary{border-color:#2c7a3f;color:#2c7a3f;}
-    .btn-primary:hover{background:#2c7a3f;color:#fff;}
-    .hero{background:linear-gradient(rgba(255,255,255,.93),rgba(255,255,255,.93)),url("hero.jpg");background-size:cover;background-position:center;border-bottom:4px solid #1f3a5f;padding:46px 0;text-align:center;}
-    .logo{width:45%;max-width:480px;min-width:260px;height:auto;margin-bottom:14px;}
-    h1{color:#1f3a5f;margin:10px 0;font-size:2em;}
-    h2{margin:0 0 14px;text-transform:uppercase;letter-spacing:1px;color:#1f3a5f;border-bottom:3px solid #1f3a5f;padding-bottom:10px;}
-    p{line-height:1.75;}
-    .section{padding:34px 0;}
-    .card{background:#fff;border:1px solid #d0d0d0;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.06);padding:34px;}
-    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;}
-    .tile{border:1px solid #d0d0d0;border-radius:10px;padding:16px;background:#fff;margin-bottom:14px;}
-    .tile h3{margin:0 0 8px;color:#111;}
-    .notice{background:#f8f8f8;border:1px solid #d0d0d0;border-left:6px solid #1f3a5f;border-radius:8px;padding:14px 16px;margin:16px 0;}
-    .cta{background:#111;color:#fff;text-align:center;padding:34px 20px;}
-    .cta a{color:#fff;}
-    .footer{background:#fff;border-top:1px solid #d0d0d0;text-align:center;color:#555;font-size:.92em;padding:20px;}
-    @media(max-width:900px){.grid-2{grid-template-columns:1fr;}.card{padding:24px;}.logo{width:80%;}}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f3f3;
+      margin: 0;
+      padding: 0;
+      color: #111;
+    }
+
+    a {
+      color: #1f3a5f;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    .topbar {
+      background: #fff;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover {
+      border-bottom: 2px solid #1f3a5f;
+    }
+
+    .muted {
+      color: #444;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 16px;
+      border-radius: 7px;
+      border: 2px solid #1f3a5f;
+      background: #fff;
+      color: #1f3a5f;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .btn:hover {
+      background: #1f3a5f;
+      color: #fff;
+    }
+
+    .btn-primary {
+      border-color: #2c7a3f;
+      color: #2c7a3f;
+    }
+
+    .btn-primary:hover {
+      background: #2c7a3f;
+      border-color: #2c7a3f;
+      color: #fff;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)),
+        url("hero.jpg");
+      background-size: cover;
+      background-position: center;
+      border-bottom: 4px solid #1f3a5f;
+      padding: 46px 0;
+      text-align: center;
+    }
+
+    .logo {
+      width: 45%;
+      max-width: 480px;
+      min-width: 260px;
+      height: auto;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      color: #1f3a5f;
+      margin: 10px 0;
+      font-size: 2em;
+      line-height: 1.25;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1f3a5f;
+      border-bottom: 3px solid #1f3a5f;
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: #1f3a5f;
+    }
+
+    p {
+      line-height: 1.75;
+    }
+
+    ul {
+      line-height: 1.75;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    .hero-text {
+      max-width: 850px;
+      margin: 0 auto;
+      font-size: 1.06em;
+    }
+
+    .hero-buttons {
+      margin-top: 20px;
+    }
+
+    .section {
+      padding: 34px 0;
+    }
+
+    .section-tight {
+      padding-top: 0;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #d0d0d0;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      padding: 34px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .tile {
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      padding: 18px;
+      background: #fff;
+      margin-bottom: 14px;
+    }
+
+    .tile p {
+      margin-bottom: 0;
+    }
+
+    .notice {
+      background: #f8f8f8;
+      border: 1px solid #d0d0d0;
+      border-left: 6px solid #1f3a5f;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0;
+      line-height: 1.65;
+    }
+
+    .success {
+      background: #fff;
+      border: 1px solid #d0d0d0;
+      border-left: 6px solid #2c7a3f;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0;
+      line-height: 1.65;
+    }
+
+    .process-step {
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      padding: 18px;
+      background: #fff;
+    }
+
+    .step-number {
+      display: inline-block;
+      background: #1f3a5f;
+      color: #fff;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 42px 20px;
+    }
+
+    .cta h2 {
+      color: #fff;
+      border-bottom: 3px solid #fff;
+      max-width: 750px;
+      margin: 0 auto 18px;
+    }
+
+    .cta p {
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta a:not(.btn) {
+      color: #fff;
+    }
+
+    .footer {
+      background: #fff;
+      border-top: 1px solid #d0d0d0;
+      color: #555;
+      font-size: 0.92em;
+    }
+
+    .footer-inner {
+      text-align: center;
+      padding: 24px 0;
+      line-height: 1.65;
+    }
+
+    .footer-links {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .logo {
+        width: 80%;
+      }
+
+      h1 {
+        font-size: 1.65em;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "name":"Wisconsin Clemency, Pardon, and Expungement Support",
-    "provider":{
-      "@type":"LocalBusiness",
-      "name":"Paper Chasers LLC",
-      "telephone":"+1-920-572-8646",
-      "address":{
-        "@type":"PostalAddress",
-        "streetAddress":"2418 West Charles Street",
-        "addressLocality":"Appleton",
-        "addressRegion":"WI",
-        "postalCode":"54914",
-        "addressCountry":"US"
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Wisconsin Pardon Application Administrative Support",
+    "serviceType": "Pardon application document preparation and administrative support",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Paper Chasers LLC",
+      "url": "https://paperchasersllc.com/",
+      "telephone": "+1-920-572-8646",
+      "email": "info@paperchasersllc.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2418 West Charles Street",
+        "addressLocality": "Appleton",
+        "addressRegion": "WI",
+        "postalCode": "54914",
+        "addressCountry": "US"
       }
     },
-    "areaServed":"Wisconsin",
-    "description":"Document preparation, organization, and administrative support for Wisconsin clemency applications, pardon materials, and expungement-related paperwork."
+    "areaServed": {
+      "@type": "State",
+      "name": "Wisconsin"
+    },
+    "description": "Administrative support for Wisconsin pardon applications, including document organization, application completion assistance, personal statement preparation, supporting-document assembly, and final packet review."
   }
   </script>
 </head>
@@ -67,130 +352,404 @@
   <div class="topbar">
     <div class="container">
       <div class="nav">
-        <strong>Paper Chasers LLC</strong>
+
+        <div class="nav-left">
+          <strong>Paper Chasers LLC</strong>
+          <span class="muted">Appleton, Wisconsin</span>
+        </div>
+
         <div class="nav-links">
           <a href="index.html">Home</a>
+          <a href="process-service.html">Process Service</a>
           <a href="request.html">Request</a>
           <a href="fees.html">Fees</a>
           <a href="terms.html">Terms</a>
           <a href="privacy.html">Privacy</a>
         </div>
+
       </div>
     </div>
   </div>
 
   <div class="hero">
     <div class="container">
-      <img src="paper-chasers-logo.png" alt="Paper Chasers LLC Logo" class="logo" />
-      <h1>Wisconsin Clemency, Pardons & Expungement Support</h1>
-      <p>
-        Paper Chasers LLC helps individuals organize and prepare materials for Wisconsin clemency applications,
-        pardon requests, personal statements, supporting documentation, and expungement-related paperwork.
-      </p>
-      <p>
+
+      <a href="index.html" aria-label="Return to the Paper Chasers LLC homepage">
+        <img
+          src="paper-chasers-logo.png"
+          alt="Paper Chasers LLC Logo"
+          class="logo"
+        />
+      </a>
+
+      <h1>Wisconsin Pardon Application Support</h1>
+
+      <div class="hero-text">
+        <p>
+          Professional administrative assistance for individuals preparing a
+          Wisconsin pardon application, personal statement, supporting records,
+          and organized submission packet.
+        </p>
+
+        <p>
+          We help you present complete and accurate information in a clear,
+          professional, and well-organized format.
+        </p>
+      </div>
+
+      <div class="hero-buttons">
         <a class="btn btn-primary" href="request.html">Request Assistance</a>
         <a class="btn" href="tel:+19205728646">Call (920) 572-8646</a>
         <a class="btn" href="sms:+19205728646">Text Us</a>
-      </p>
+      </div>
+
     </div>
   </div>
 
   <div class="section">
     <div class="container">
       <div class="card">
-        <h2>Clemency & Pardon Assistance</h2>
+
+        <h2>Administrative Support for Your Pardon Application</h2>
 
         <div class="grid-2">
+
           <div>
             <p>
-              Many people in Wisconsin are unaware that clemency or pardon relief may be available after they have
-              changed their lives and completed the required process. The application process can be detailed,
-              document-heavy, and intimidating.
+              A pardon application may require substantial personal history,
+              conviction information, rehabilitation records, employment
+              information, references, and a thoughtful written explanation of
+              why relief is being requested.
             </p>
 
             <p>
-              Paper Chasers LLC assists with organizing information, preparing application materials, developing
-              personal statement drafts, and assembling supporting documentation in a clear and professional format.
+              Gathering that information and presenting it in an organized
+              manner can be difficult. Paper Chasers LLC provides practical
+              administrative support throughout the preparation process.
             </p>
 
-            <div class="notice">
-              <strong>Important:</strong> We do not provide legal advice, legal opinions, or attorney representation.
-              We provide document preparation, administrative support, and process guidance only. If your matter requires
-              legal advice, consult a licensed attorney.
+            <p>
+              Our work focuses on organization, document preparation,
+              communication, completeness, presentation, and documented
+              follow-through.
+            </p>
+
+            <div class="success">
+              <strong>Our objective:</strong> Help you prepare a complete,
+              organized, professional application packet that accurately
+              reflects your history, rehabilitation, accomplishments, and
+              reasons for requesting a pardon.
             </div>
           </div>
 
           <div>
-            <div class="tile">
-              <h3>Who This Helps</h3>
-              <p>Individuals seeking help with Wisconsin pardon applications, clemency packets, personal statements, and supporting documents.</p>
-            </div>
 
             <div class="tile">
-              <h3>Service Area</h3>
-              <p>Appleton, Green Bay, Oshkosh, Kaukauna, the Fox Valley, and all of Wisconsin.</p>
-            </div>
-
-            <div class="tile">
-              <h3>Contact</h3>
+              <h3>Wisconsin-Focused Assistance</h3>
               <p>
-                Paper Chasers LLC<br />
-                2418 West Charles Street<br />
-                Appleton, WI 54914<br />
-                Call/Text: <strong>(920) 572-8646</strong>
+                Our service is designed for individuals preparing pardon
+                materials relating to Wisconsin state convictions.
               </p>
             </div>
+
+            <div class="tile">
+              <h3>Individualized Preparation</h3>
+              <p>
+                Each application is developed from the applicant’s own history,
+                records, circumstances, achievements, and goals.
+              </p>
+            </div>
+
+            <div class="tile">
+              <h3>Statewide Availability</h3>
+              <p>
+                Assistance is available to applicants throughout Wisconsin,
+                including Appleton, Green Bay, Oshkosh, the Fox Valley, and
+                surrounding communities.
+              </p>
+            </div>
+
           </div>
+        </div>
+
+        <div class="notice">
+          <strong>Important service limitation:</strong>
+          Paper Chasers LLC is not a law firm. We do not provide legal advice,
+          determine legal eligibility, offer legal opinions, represent applicants
+          before the governor or any board, or guarantee that an application will
+          be accepted, heard, or granted.
         </div>
 
       </div>
     </div>
   </div>
 
-  <div class="section" style="padding-top:0;">
+  <div class="section section-tight">
     <div class="container">
       <div class="card">
-        <h2>What We Help With</h2>
+
+        <h2>What We Can Help With</h2>
 
         <div class="grid-2">
+
           <div>
+
             <div class="tile">
-              <h3>Pardon Application Preparation</h3>
-              <p>Help preparing and organizing Wisconsin pardon application materials and related supporting documents.</p>
+              <h3>Application Completion Support</h3>
+              <p>
+                Administrative assistance entering applicant-provided
+                information into the applicable pardon forms and identifying
+                unanswered or incomplete sections.
+              </p>
             </div>
 
             <div class="tile">
-              <h3>Personal Statement Support</h3>
-              <p>Assistance drafting, organizing, and polishing your personal statement so your story is presented clearly.</p>
+              <h3>Personal Statement Preparation</h3>
+              <p>
+                Help organizing, drafting, proofreading, and professionally
+                formatting a personal statement based on your own facts,
+                experiences, and reasons for seeking relief.
+              </p>
             </div>
 
             <div class="tile">
-              <h3>Supporting Documentation</h3>
-              <p>Help identifying, organizing, and assembling letters, records, certificates, and rehabilitation materials.</p>
+              <h3>Personal History Organization</h3>
+              <p>
+                Assistance organizing employment, education, treatment,
+                volunteer work, family responsibilities, community involvement,
+                accomplishments, and post-conviction progress.
+              </p>
             </div>
+
+            <div class="tile">
+              <h3>Conviction Information Organization</h3>
+              <p>
+                Help organizing applicant-provided case numbers, conviction
+                information, sentencing information, discharge information, and
+                related records.
+              </p>
+            </div>
+
           </div>
 
           <div>
+
             <div class="tile">
-              <h3>Expungement-Related Paperwork</h3>
-              <p>Administrative support with organizing and preparing expungement-related paperwork where appropriate.</p>
+              <h3>Supporting Document Assembly</h3>
+              <p>
+                Assistance organizing certificates, records, awards, employment
+                materials, educational achievements, treatment records, and
+                other relevant supporting documents.
+              </p>
             </div>
 
             <div class="tile">
-              <h3>Packet Organization</h3>
-              <p>Help assembling a clean, organized, professional packet before submission.</p>
+              <h3>Reference and Support Letters</h3>
+              <p>
+                Administrative assistance identifying potential letter writers,
+                providing general submission instructions, and organizing
+                completed support letters.
+              </p>
             </div>
 
             <div class="tile">
-              <h3>Process Guidance</h3>
-              <p>Step-by-step administrative support so you understand what information and documents are needed next.</p>
+              <h3>Packet Review</h3>
+              <p>
+                A final administrative review for organization, readability,
+                missing responses, obvious inconsistencies, labeling, and
+                document order.
+              </p>
             </div>
+
+            <div class="tile">
+              <h3>Submission Preparation</h3>
+              <p>
+                Assistance preparing the completed materials for submission
+                according to the instructions applicable at that time.
+              </p>
+            </div>
+
           </div>
+
         </div>
 
         <div class="notice">
-          <strong>Reminder:</strong> Paper Chasers LLC is not a law firm. We do not guarantee outcomes,
-          eligibility, approval, expungement, pardon, or clemency relief.
+          All facts, dates, explanations, and supporting materials must be
+          provided or approved by the applicant. Paper Chasers LLC does not
+          invent facts, alter records, obtain false statements, conceal
+          convictions, or submit information known to be inaccurate.
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-tight">
+    <div class="container">
+      <div class="card">
+
+        <h2>Our Preparation Process</h2>
+
+        <div class="grid-3">
+
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Initial Intake</h3>
+            <p>
+              We gather preliminary information about your convictions,
+              sentence completion, personal history, and reasons for requesting
+              assistance.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Scope Confirmation</h3>
+            <p>
+              We explain the administrative services requested, expected
+              materials, pricing, responsibilities, and anticipated preparation
+              process.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Document Collection</h3>
+            <p>
+              You provide the application information, records, certificates,
+              letters, case information, and other materials needed for the
+              agreed scope.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Draft Preparation</h3>
+            <p>
+              We organize the materials and prepare agreed application sections,
+              statements, summaries, or supporting documents for your review.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <h3>Applicant Review</h3>
+            <p>
+              You review the materials, verify the facts, identify corrections,
+              and approve the final wording and supporting documents.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">6</div>
+            <h3>Final Organization</h3>
+            <p>
+              We perform the agreed administrative review and organize the
+              completed materials for submission.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-tight">
+    <div class="container">
+      <div class="card">
+
+        <h2>What Applicants Should Be Prepared to Provide</h2>
+
+        <div class="grid-2">
+
+          <div>
+            <ul>
+              <li>Full legal name and current contact information;</li>
+              <li>Previous names or aliases, when applicable;</li>
+              <li>Wisconsin court case numbers and counties;</li>
+              <li>Conviction and sentencing information;</li>
+              <li>Sentence-completion or discharge information;</li>
+              <li>Employment and education history;</li>
+              <li>Residence history when requested by the application;</li>
+              <li>Community service and volunteer activities;</li>
+            </ul>
+          </div>
+
+          <div>
+            <ul>
+              <li>Treatment, counseling, or rehabilitation records;</li>
+              <li>Certificates, licenses, training, awards, or achievements;</li>
+              <li>Information about family and community responsibilities;</li>
+              <li>Potential references or support-letter writers;</li>
+              <li>A truthful account of the offense and its consequences;</li>
+              <li>Evidence of accountability and positive change;</li>
+              <li>The specific reasons a pardon is being requested; and</li>
+              <li>Other materials required by the current application.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="notice">
+          Do not send original irreplaceable documents unless specifically
+          requested. Keep copies of all records and completed materials for your
+          own files.
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-tight">
+    <div class="container">
+      <div class="card">
+
+        <h2>Important Limitations</h2>
+
+        <div class="grid-2">
+
+          <div class="tile">
+            <h3>No Eligibility Determination</h3>
+            <p>
+              We may help compare applicant-provided information with published
+              application instructions, but we do not make a legal determination
+              that an applicant qualifies for a pardon.
+            </p>
+          </div>
+
+          <div class="tile">
+            <h3>No Legal Representation</h3>
+            <p>
+              We do not act as your attorney, communicate as legal counsel,
+              appear on your behalf, or represent you in hearings or proceedings.
+            </p>
+          </div>
+
+          <div class="tile">
+            <h3>No Guaranteed Outcome</h3>
+            <p>
+              A professionally organized packet cannot guarantee consideration,
+              an interview, a hearing, favorable review, or a pardon.
+            </p>
+          </div>
+
+          <div class="tile">
+            <h3>No Expungement Determination</h3>
+            <p>
+              Questions about expungement eligibility, reopening a criminal
+              judgment, post-conviction relief, sentence modification, or other
+              legal remedies should be directed to a licensed Wisconsin attorney.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="notice">
+          Government forms, procedures, eligibility standards, instructions,
+          and submission requirements may change. Current official instructions
+          control over information appearing on this website or in earlier
+          materials.
         </div>
 
       </div>
@@ -198,29 +757,66 @@
   </div>
 
   <div class="cta">
-    <h2 style="color:#fff;border-bottom:3px solid #fff;">Start Building Your Packet</h2>
+
+    <h2>Start Organizing Your Wisconsin Pardon Application</h2>
+
     <p>
-      A strong application starts with clear organization, complete documentation, and a well-prepared presentation.
+      A strong application begins with truthful information, complete records,
+      careful preparation, and a clear presentation of rehabilitation and
+      positive change.
     </p>
+
     <p>
-      <strong>Call or Text:</strong> <a href="tel:+19205728646">(920) 572-8646</a>
+      Contact Paper Chasers LLC to discuss the administrative support you need.
+      Submission of a request does not mean the assignment has been accepted.
     </p>
+
     <p>
-      <a class="btn" href="request.html">Request Assistance</a>
+      <strong>Call or Text:</strong>
+      <a href="tel:+19205728646">(920) 572-8646</a>
     </p>
+
+    <p>
+      <a class="btn btn-primary" href="request.html">Request Pardon Assistance</a>
+      <a class="btn" href="mailto:info@paperchasersllc.com">Email Us</a>
+    </p>
+
   </div>
 
   <div class="footer">
-    <strong>Paper Chasers LLC</strong><br />
-    2418 West Charles Street, Appleton, WI 54914<br />
-    Call or Text: (920) 572-8646<br /><br />
-    <a href="index.html">Home</a> |
-    <a href="request.html">Request</a> |
-    <a href="fees.html">Fees</a> |
-    <a href="terms.html">Terms</a> |
-    <a href="privacy.html">Privacy</a>
-    <br /><br />
-    © Paper Chasers LLC — Wisconsin
+    <div class="container">
+      <div class="footer-inner">
+
+        <strong>Paper Chasers LLC</strong><br />
+        Professional Administrative &amp; Litigation Support Services<br />
+        2418 West Charles Street, Appleton, WI 54914<br />
+        Call or Text:
+        <a href="tel:+19205728646">(920) 572-8646</a><br />
+        Email:
+        <a href="mailto:info@paperchasersllc.com">
+          info@paperchasersllc.com
+        </a>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="process-service.html">Process Service</a>
+          <a href="request.html">Request Service</a>
+          <a href="fees.html">Fees</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+
+        <div style="margin-top:12px;">
+          Paper Chasers LLC is not a law firm and does not provide legal advice
+          or legal representation.
+        </div>
+
+        <div style="margin-top:10px;">
+          © Paper Chasers LLC — Wisconsin
+        </div>
+
+      </div>
+    </div>
   </div>
 
 </body>
