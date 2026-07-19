@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+
   <title>Request Received | Paper Chasers LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="Thank you for contacting Paper Chasers LLC. Your service request has been received." />
+  <meta name="description" content="Thank you for contacting Paper Chasers LLC. Your service request has been submitted for review." />
   <meta name="robots" content="noindex,follow" />
 
   <style>
@@ -17,19 +18,67 @@
       color: #111;
     }
 
+    a {
+      color: #1f3a5f;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    .topbar {
+      background: #fff;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover {
+      border-bottom: 2px solid #1f3a5f;
+    }
+
+    .muted {
+      color: #444;
+    }
+
     .hero {
       background:
         linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
         url("hero.jpg");
       background-size: cover;
       background-position: center;
-      padding: 34px 18px 18px 18px;
+      padding: 34px 18px 24px;
       border-bottom: 4px solid #1f3a5f;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
     }
 
     .masthead {
@@ -42,16 +91,23 @@
       max-width: 520px;
       min-width: 260px;
       height: auto;
-      margin: 0 auto 12px auto;
+      margin: 0 auto 12px;
       display: block;
     }
 
     .tagline {
-      font-size: 1.1em;
+      font-size: 1.35em;
       font-weight: bold;
       letter-spacing: 0.3px;
       color: #1f3a5f;
       margin: 0;
+    }
+
+    .subline {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #333;
+      line-height: 1.6;
     }
 
     .card {
@@ -60,16 +116,21 @@
       border-radius: 12px;
       box-shadow: 0 10px 24px rgba(0,0,0,0.06);
       padding: 44px;
-      margin: 30px auto 60px auto;
+      margin: 30px auto 60px;
       text-align: center;
     }
 
     h1 {
-      margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 1.6em;
+      margin: 0 0 14px;
+      font-size: 1.7em;
       text-transform: uppercase;
       letter-spacing: 1px;
+      color: #1f3a5f;
+    }
+
+    h2 {
+      margin: 28px 0 10px;
+      font-size: 1.15em;
       color: #1f3a5f;
     }
 
@@ -79,26 +140,65 @@
       font-size: 1.05em;
     }
 
+    .success-box {
+      background: #fff;
+      border: 1px solid #d0d0d0;
+      border-left: 6px solid #2c7a3f;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 24px 0;
+      text-align: left;
+      line-height: 1.7;
+    }
+
     .notice {
       background: #f8f8f8;
-      border-left: 6px solid #1f3a5f;
       border: 1px solid #d0d0d0;
+      border-left: 6px solid #1f3a5f;
+      border-radius: 8px;
       padding: 18px 20px;
-      margin: 26px 0;
+      margin: 24px 0;
       font-size: 0.95em;
       text-align: left;
+      line-height: 1.65;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 14px;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .step {
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      padding: 16px;
+      background: #fff;
+    }
+
+    .step strong {
+      color: #1f3a5f;
+    }
+
+    .btn-row {
+      margin-top: 26px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
       padding: 14px 22px;
-      border-radius: 6px;
+      border-radius: 7px;
       border: 2px solid #1f3a5f;
       text-decoration: none;
       font-weight: bold;
       color: #1f3a5f;
       background: #fff;
-      margin: 10px;
     }
 
     .btn:hover {
@@ -106,23 +206,75 @@
       color: #fff;
     }
 
+    .btn-primary {
+      border-color: #2c7a3f;
+      color: #2c7a3f;
+    }
+
+    .btn-primary:hover {
+      background: #2c7a3f;
+      border-color: #2c7a3f;
+      color: #fff;
+    }
+
     .footer {
-      margin-top: 40px;
-      padding-top: 18px;
+      background: #fff;
       border-top: 1px solid #d0d0d0;
-      font-size: 0.9em;
+      margin-top: 40px;
+    }
+
+    .footer-inner {
+      padding: 22px 0;
+      font-size: 0.92em;
       color: #555;
       text-align: center;
+      line-height: 1.65;
+    }
+
+    .footer-links {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     @media (max-width: 900px) {
-      .logo { width: 80%; }
-      .card { padding: 28px; }
+      .logo {
+        width: 80%;
+      }
+
+      .card {
+        padding: 28px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="nav">
+        <div class="nav-left">
+          <strong>Paper Chasers LLC</strong>
+          <span class="muted">Appleton, Wisconsin</span>
+        </div>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="process-service.html">Process Service</a>
+          <a href="fees.html">Fees</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="hero">
     <div class="container">
@@ -130,7 +282,12 @@
         <a href="index.html" aria-label="Back to Home">
           <img src="paper-chasers-logo.png" alt="Paper Chasers LLC Logo" class="logo" />
         </a>
+
         <p class="tagline">Request Received</p>
+
+        <p class="subline">
+          Professional Administrative &amp; Litigation Support Services
+        </p>
       </div>
     </div>
   </div>
@@ -140,31 +297,86 @@
 
       <h1>Thank You</h1>
 
-      <p>
-        Your service request has been successfully received.
-        We will review the details provided and follow up to confirm scope, timeline,
-        and pricing before any work begins.
-      </p>
+      <div class="success-box">
+        <strong>Your service request has been submitted.</strong><br />
+        Paper Chasers LLC will review the information provided to determine scope, availability,
+        timing, pricing, and whether any additional documents or details are needed.
+      </div>
 
       <p>
-        If your request is time-sensitive or urgent, you may also call directly at
-        <strong>(920) 572-8646</strong>.
+        Your submission begins the intake and review process only. It does not mean that the assignment
+        has been accepted or that work has begun.
       </p>
+
+      <h2>What Happens Next</h2>
+
+      <div class="steps">
+        <div class="step">
+          <strong>1. Request Review</strong>
+          <p>We review the service type, location, deadline, instructions, and other information submitted.</p>
+        </div>
+
+        <div class="step">
+          <strong>2. Scope &amp; Pricing</strong>
+          <p>We may contact you to ask questions, request documents, confirm availability, and discuss pricing.</p>
+        </div>
+
+        <div class="step">
+          <strong>3. Authorization</strong>
+          <p>Work begins only after the assignment, timing, terms, and any required payment are confirmed.</p>
+        </div>
+      </div>
 
       <div class="notice">
-        <strong>Important:</strong><br />
-        Submitting a request does not create an attorney-client relationship.
-        Paper Chasers LLC is not a law firm and does not provide legal advice.
-        Services are provided only after scope and terms are confirmed.
+        <strong>Time-sensitive or urgent request?</strong><br />
+        Call or text <a href="tel:+19205728646">(920) 572-8646</a> after submitting the form.
+        Mention that you already completed the online request so we can look for it. A telephone call,
+        text message, or form submission does not guarantee that an urgent assignment can be accepted.
       </div>
 
-      <a class="btn" href="index.html">Return to Home</a>
-      <a class="btn" href="terms.html">View Terms &amp; Conditions</a>
-
-      <div class="footer">
-        © Paper Chasers LLC — Wisconsin
+      <div class="notice">
+        <strong>Please do not repeatedly submit the same request.</strong><br />
+        Duplicate submissions can delay review. If you need to correct or add information, call, text,
+        or email <a href="mailto:info@paperchasersllc.com">info@paperchasersllc.com</a>.
       </div>
 
+      <div class="notice">
+        <strong>No legal advice or representation:</strong><br />
+        Paper Chasers LLC is not a law firm and does not provide legal advice or legal representation.
+        Submitting a request does not create an attorney-client relationship. Consult a licensed attorney
+        for legal advice.
+      </div>
+
+      <div class="btn-row">
+        <a class="btn btn-primary" href="tel:+19205728646">Call Us</a>
+        <a class="btn" href="sms:+19205728646">Text Us</a>
+        <a class="btn" href="index.html">Return to Home</a>
+        <a class="btn" href="fees.html">Fees &amp; Pricing</a>
+        <a class="btn" href="terms.html">Terms &amp; Conditions</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <strong>Paper Chasers LLC</strong><br />
+        Professional Administrative &amp; Litigation Support Services<br />
+        2418 West Charles Street, Appleton, WI 54914<br />
+        Call or Text: (920) 572-8646
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="request.html">Request</a>
+          <a href="process-service.html">Process Service</a>
+          <a href="fees.html">Fees</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+
+        <div style="margin-top:10px;">© Paper Chasers LLC — Wisconsin</div>
+      </div>
     </div>
   </div>
 
