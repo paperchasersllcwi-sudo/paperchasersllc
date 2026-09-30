@@ -276,6 +276,9 @@
     .article-index .item { border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px 16px; margin: 10px 0; text-align: left; }
     .article-index .item a { font-weight: bold; font-size: 1.05em; }
     .article-index .item p { margin: 6px 0 0; color: #333; }
+    .video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 6px 0 8px; border-radius: 10px; overflow: hidden; background: #000; }
+    .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video-caption { font-size: 0.95em; color: #444; margin: 0 0 22px; text-align: left; }
     /* Smaller logo on phones */
     @media (max-width: 820px) {
       img.logo { width: 55%; min-width: 0; max-width: 240px; }
@@ -393,6 +396,9 @@
       <div class="article-meta">By Michael Winius, Paper Chasers LLC</div>
 
       <div class="article-disclaimer"><strong>Disclaimer:</strong> This article is provided for educational and informational purposes only and does not constitute legal advice. The Wisconsin commutation process is discretionary and no applicant is entitled to relief. Paper Chasers LLC is not a law firm and does not provide legal advice or legal representation.</div>
+
+      <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/MDIbzNyASsM" title="Coming Home From Prison in Wisconsin: What I Wish I'd Known About Supervision" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <p class="video-caption">Building a release plan? Episode 2 of The People's Paralegal covers what supervision looks like after release. <a href="https://www.youtube.com/watch?v=MDIbzNyASsM" target="_blank" rel="noopener">Open on YouTube</a></p>
 
       <h2>Introduction</h2>
 
@@ -582,6 +588,7 @@
           <a href="terms.html">Terms</a>
           <a href="privacy.html">Privacy</a>
           <a href="articles.html">Articles</a>
+          <a href="https://www.youtube.com/@ThePeoplesParalegal" target="_blank" rel="noopener">The People's Paralegal (YouTube)</a>
         </div>
 
         <div style="margin-top:10px;">© Paper Chasers LLC — Wisconsin</div>
