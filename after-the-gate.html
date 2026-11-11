@@ -319,6 +319,21 @@
     .tier .btn { text-align: center; }
     .tier-featured { border: 2px solid #2c7a3f; }
     @media (max-width: 900px) { .sponsor-tiers { grid-template-columns: 1fr; } }
+    .album { display: grid; grid-template-columns: 260px 1fr; gap: 22px; align-items: start; margin: 18px 0 10px; }
+    .album-cover { width: 100%; height: auto; border-radius: 10px; border: 1px solid #d0d0d0; display: block; }
+    .album-info { text-align: left; }
+    @media (max-width: 700px) { .album-info { text-align: center; } .track { text-align: left; } }
+    .album-title { font-size: 1.3em; font-weight: bold; color: #1f3a5f; }
+    .album-artist { color: #555; margin: 2px 0 12px; }
+    .tracklist { list-style: none; margin: 0; padding: 0; }
+    .track { border: 1px solid #d0d0d0; border-radius: 10px; padding: 10px 12px; margin: 0 0 10px; background: #fff; }
+    .track-head { display: flex; gap: 10px; align-items: baseline; margin-bottom: 6px; }
+    .track-num { color: #2c7a3f; font-weight: bold; min-width: 1.3em; }
+    .track-title { font-weight: bold; color: #1f3a5f; flex: 1; }
+    .track-time { color: #555; font-size: 0.92em; font-variant-numeric: tabular-nums; }
+    .track audio { width: 100%; height: 40px; display: block; }
+    .track.playing { border-color: #2c7a3f; box-shadow: 0 0 0 1px #2c7a3f; }
+    @media (max-width: 700px) { .album { grid-template-columns: 1fr; } .album-cover { max-width: 320px; margin: 0 auto; } }
   </style>
   <style>
     /* Research Library header button */
@@ -435,6 +450,52 @@
 
       <div class="notice"><strong>Please note:</strong> Paper Chasers LLC is a for-profit business, not a charity. Sponsorships pay for copies of the book and are not tax-deductible charitable contributions. Placement of books is subject to each facility's library and donation policies.</div>
 
+      <h2 id="album">Listen to the <em>After the Gate</em> Album</h2>
+
+      <p>The book has a soundtrack. <em>After the Gate</em> by NOCX is an album about coming home: the cell door, the bus ride out, supervision, and staying free. Press play on any song below to listen right here.</p>
+
+      <div class="album">
+        <img class="album-cover" src="media/after-the-gate/after-the-gate-album-cover.jpg" alt="After the Gate album cover by NOCX: a man with a duffel bag waits at a bus stop outside a prison at sunrise" width="800" height="800" loading="lazy" />
+        <div class="album-info">
+          <div class="album-title"><em>After the Gate</em></div>
+          <div class="album-artist">NOCX &middot; 8 songs &middot; 27 min</div>
+          <ol class="tracklist">
+          <li class="track">
+            <div class="track-head"><span class="track-num">1</span><span class="track-title">Out of the Cell</span><span class="track-time">2:31</span></div>
+            <audio controls preload="none" src="media/after-the-gate/01-out-of-the-cell.mp3" aria-label="Play Out of the Cell by NOCX"></audio>
+          </li>
+          <li class="track">
+            <div class="track-head"><span class="track-num">2</span><span class="track-title">Cell Door Bounce (Stay Out)</span><span class="track-time">2:39</span></div>
+            <audio controls preload="none" src="media/after-the-gate/02-cell-door-bounce-stay-out.mp3" aria-label="Play Cell Door Bounce (Stay Out) by NOCX"></audio>
+          </li>
+          <li class="track">
+            <div class="track-head"><span class="track-num">3</span><span class="track-title">Check Then Bounce</span><span class="track-time">2:59</span></div>
+            <audio controls preload="none" src="media/after-the-gate/03-check-then-bounce.mp3" aria-label="Play Check Then Bounce by NOCX"></audio>
+          </li>
+          <li class="track">
+            <div class="track-head"><span class="track-num">4</span><span class="track-title">Ain&rsquo;t Going Back</span><span class="track-time">2:48</span></div>
+            <audio controls preload="none" src="media/after-the-gate/04-aint-going-back.mp3" aria-label="Play Ain&rsquo;t Going Back by NOCX"></audio>
+          </li>
+          <li class="track">
+            <div class="track-head"><span class="track-num">5</span><span class="track-title">Concrete Classroom</span><span class="track-time">3:49</span></div>
+            <audio controls preload="none" src="media/after-the-gate/05-concrete-classroom.mp3" aria-label="Play Concrete Classroom by NOCX"></audio>
+          </li>
+          <li class="track">
+            <div class="track-head"><span class="track-num">6</span><span class="track-title">Silence Is Gold</span><span class="track-time">3:26</span></div>
+            <audio controls preload="none" src="media/after-the-gate/06-silence-is-gold.mp3" aria-label="Play Silence Is Gold by NOCX"></audio>
+          </li>
+          <li class="track">
+            <div class="track-head"><span class="track-num">7</span><span class="track-title">Never Again</span><span class="track-time">3:28</span></div>
+            <audio controls preload="none" src="media/after-the-gate/07-never-again.mp3" aria-label="Play Never Again by NOCX"></audio>
+          </li>
+          <li class="track">
+            <div class="track-head"><span class="track-num">8</span><span class="track-title">Against All Odds</span><span class="track-time">6:01</span></div>
+            <audio controls preload="none" src="media/after-the-gate/08-against-all-odds.mp3" aria-label="Play Against All Odds by NOCX"></audio>
+          </li>
+          </ol>
+        </div>
+      </div>
+
       <h2>Get Your Own Copy</h2>
 
       <p><em>After the Gate</em> is available in Kindle and paperback on <a href="https://www.amazon.com/dp/B0HJ17THHB" target="_blank" rel="noopener">Amazon</a>.</p>
@@ -489,6 +550,23 @@
         b.innerHTML = open ? '&#10005; Close' : '&#9776; Menu';
       });
     });
+  </script>
+  <script>
+    // Album: play one song at a time and continue to the next song
+    (function () {
+      var players = Array.prototype.slice.call(document.querySelectorAll('.tracklist audio'));
+      players.forEach(function (a, i) {
+        a.addEventListener('play', function () {
+          players.forEach(function (o) { if (o !== a) { o.pause(); o.closest('.track').classList.remove('playing'); } });
+          a.closest('.track').classList.add('playing');
+        });
+        a.addEventListener('pause', function () { a.closest('.track').classList.remove('playing'); });
+        a.addEventListener('ended', function () {
+          a.closest('.track').classList.remove('playing');
+          if (players[i + 1]) { players[i + 1].play(); }
+        });
+      });
+    })();
   </script>
 </body>
 </html>
