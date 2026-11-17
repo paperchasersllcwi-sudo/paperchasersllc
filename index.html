@@ -340,6 +340,36 @@ p { margin: 0; }
   .callbar .btn { min-height: 46px; }
   body { padding-bottom: 72px; }
 }
+
+/* After the Gate feature */
+.gate { background: var(--ink); color: #d3dae2; padding: 92px 0; }
+.gate-grid { display: grid; grid-template-columns: 420px 1fr; gap: 64px; align-items: start; }
+.gate-art img { width: 100%; height: auto; border-radius: 6px; box-shadow: 0 24px 50px rgba(0,0,0,.4); }
+.gate h2 { color: var(--white); font-size: clamp(2.2rem, 4vw, 3rem); }
+.gate-sub { font-family: var(--serif); font-size: 1.3rem; color: var(--honey); margin-top: 10px; }
+.gate-text > p { margin-top: 16px; max-width: 60ch; }
+.gate strong { color: var(--white); }
+.gate-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.player { margin-top: 36px; border-top: 1px solid #2c3b4c; padding-top: 22px; }
+.player-head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.player-head span { color: #a9b5c2; font-size: .92rem; }
+.player audio { width: 100%; margin: 14px 0 10px; }
+.tracks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+.track-btn {
+  width: 100%; display: grid; grid-template-columns: 26px 1fr auto; gap: 10px; align-items: baseline;
+  background: none; border: 0; border-bottom: 1px solid #26333f; color: #d3dae2;
+  font: 500 .97rem var(--sans); text-align: left; padding: 10px 2px; cursor: pointer;
+}
+.track-btn:hover .tt { color: var(--white); text-decoration: underline; text-underline-offset: 4px; }
+.track-btn .tn { color: #8795a4; font-variant-numeric: tabular-nums; }
+.track-btn .td { color: #8795a4; font-size: .88rem; font-variant-numeric: tabular-nums; }
+.track-btn.is-current .tn, .track-btn.is-current .tt { color: var(--honey); }
+@media (max-width: 900px) {
+  .gate { padding: 64px 0; }
+  .gate-grid { grid-template-columns: 1fr; gap: 36px; }
+  .gate-art img { max-width: 360px; }
+  .tracks { grid-template-columns: 1fr; }
+}
   </style>
 
 
@@ -512,6 +542,7 @@ p { margin: 0; }
         <a href="fees.html">Fees</a>
         <a href="service-area.html">Service area</a>
         <a href="articles.html">Research library</a>
+        <a href="after-the-gate.html">After the Gate</a>
         <a href="about.html">About</a>
         <a href="request.html">Request service</a>
         <a href="tel:+19205728646">Call or text (920) 572-8646</a>
@@ -697,6 +728,46 @@ p { margin: 0; }
     </div>
   </section>
 
+  <section class="gate on-ink" id="after-the-gate" aria-labelledby="gate-title">
+    <div class="wrap gate-grid">
+      <div class="gate-art">
+        <img src="media/after-the-gate/after-the-gate-album-cover.jpg" alt="After the Gate album cover by NOCX: a man with a duffel bag waits at a bus stop outside a prison at sunrise" width="800" height="800" loading="lazy" />
+      </div>
+      <div class="gate-text">
+        <h2 id="gate-title">After the Gate</h2>
+        <p class="gate-sub">A Wisconsin reentry guide for staying free, and an 8-song album to go with it.</p>
+        <p>
+          Michael's book is an honest, practical guide to supervision, work, money,
+          family, and rebuilding life after incarceration. The NOCX album tells the
+          same story in music: the cell door, the bus ride out, check-ins, and staying out.
+        </p>
+        <p>
+          Help put the book where it's needed most. <strong>$10 places one copy</strong>
+          in a Wisconsin correctional facility library.
+        </p>
+        <div class="gate-actions">
+          <a class="btn btn-primary" href="after-the-gate.html#sponsor">Sponsor a copy</a>
+          <a class="btn btn-ghost" href="https://www.amazon.com/After-Gate-Wisconsin-Reentry-Staying/dp/B0HJ17THHB">Buy on Amazon</a>
+        </div>
+
+        <div class="player">
+          <p class="player-head"><strong>Listen: <em>After the Gate</em></strong> <span>NOCX &middot; 8 songs &middot; 27 min</span></p>
+          <audio id="gate-audio" controls preload="none" src="media/after-the-gate/01-out-of-the-cell.mp3">Your browser does not support audio playback.</audio>
+          <ol class="tracks" role="list">
+            <li><button type="button" class="track-btn is-current" data-src="media/after-the-gate/01-out-of-the-cell.mp3" aria-pressed="true"><span class="tn">1</span><span class="tt">Out of the Cell</span><span class="td">2:31</span></button></li>
+            <li><button type="button" class="track-btn" data-src="media/after-the-gate/02-cell-door-bounce-stay-out.mp3" aria-pressed="false"><span class="tn">2</span><span class="tt">Cell Door Bounce (Stay Out)</span><span class="td">2:39</span></button></li>
+            <li><button type="button" class="track-btn" data-src="media/after-the-gate/03-check-then-bounce.mp3" aria-pressed="false"><span class="tn">3</span><span class="tt">Check Then Bounce</span><span class="td">2:59</span></button></li>
+            <li><button type="button" class="track-btn" data-src="media/after-the-gate/04-aint-going-back.mp3" aria-pressed="false"><span class="tn">4</span><span class="tt">Ain&rsquo;t Going Back</span><span class="td">2:48</span></button></li>
+            <li><button type="button" class="track-btn" data-src="media/after-the-gate/05-concrete-classroom.mp3" aria-pressed="false"><span class="tn">5</span><span class="tt">Concrete Classroom</span><span class="td">3:49</span></button></li>
+            <li><button type="button" class="track-btn" data-src="media/after-the-gate/06-silence-is-gold.mp3" aria-pressed="false"><span class="tn">6</span><span class="tt">Silence Is Gold</span><span class="td">3:26</span></button></li>
+            <li><button type="button" class="track-btn" data-src="media/after-the-gate/07-never-again.mp3" aria-pressed="false"><span class="tn">7</span><span class="tt">Never Again</span><span class="td">3:28</span></button></li>
+            <li><button type="button" class="track-btn" data-src="media/after-the-gate/08-against-all-odds.mp3" aria-pressed="false"><span class="tn">8</span><span class="tt">Against All Odds</span><span class="td">6:01</span></button></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" aria-labelledby="area-title">
     <div class="wrap area">
       <div>
@@ -745,9 +816,9 @@ p { margin: 0; }
           <a class="more" href="https://www.youtube.com/@ThePeoplesParalegal">Watch on YouTube</a>
         </article>
         <article class="resource">
-          <h3>After the Gate</h3>
-          <p>Michael's practical reentry guide. Sponsor a copy for a Wisconsin correctional library for $10.</p>
-          <a class="more" href="after-the-gate.html">About the book</a>
+          <h3>Client forms</h3>
+          <p>The rate sheet, service request checklist, and pardon intake questionnaire, free to download.</p>
+          <a class="more" href="articles.html#forms">Get the forms</a>
         </article>
       </div>
     </div>
@@ -813,6 +884,7 @@ p { margin: 0; }
           <li><a href="fees.html">Fees</a></li>
           <li><a href="service-area.html">Service area</a></li>
           <li><a href="articles.html">Research library</a></li>
+          <li><a href="after-the-gate.html">After the Gate</a></li>
           <li><a href="request.html">Request service</a></li>
         </ul>
       </div>
@@ -837,6 +909,26 @@ p { margin: 0; }
   <a class="btn btn-ghost" href="tel:+19205728646">Call</a>
   <a class="btn btn-primary" href="request.html">Request service</a>
 </div>
+
+<script>
+  (function () {
+    var audio = document.getElementById('gate-audio');
+    if (!audio) return;
+    var btns = document.querySelectorAll('.track-btn');
+    function select(btn, play) {
+      btns.forEach(function (b) { b.classList.remove('is-current'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('is-current'); btn.setAttribute('aria-pressed', 'true');
+      if (audio.getAttribute('src') !== btn.dataset.src) audio.src = btn.dataset.src;
+      if (play) { var p = audio.play(); if (p && p.catch) p.catch(function () {}); }
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function () { select(b, true); }); });
+    audio.addEventListener('ended', function () {
+      var arr = Array.prototype.slice.call(btns);
+      var i = arr.findIndex(function (b) { return b.classList.contains('is-current'); });
+      if (i > -1 && i < arr.length - 1) select(arr[i + 1], true);
+    });
+  })();
+</script>
 
 </body>
 </html>
