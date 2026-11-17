@@ -69,779 +69,292 @@
     content="https://paperchasersllc.com/paper-chasers-logo.png"
   />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --blue: #1f3a5f;
-      --dark-blue: #142840;
-      --green: #2c7a3f;
-      --black: #111111;
-      --dark-gray: #333333;
-      --gray: #555555;
-      --light-gray: #f3f3f3;
-      --border: #d0d0d0;
-      --white: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--light-gray);
-      margin: 0;
-      padding: 0;
-      color: var(--black);
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    a {
-      color: var(--blue);
-      text-decoration: underline;
-      font-weight: bold;
-    }
-
-    p {
-      line-height: 1.75;
-      margin: 12px 0;
-    }
-
-    ul {
-      line-height: 1.75;
-      padding-left: 22px;
-    }
-
-    li {
-      margin-bottom: 7px;
-    }
-
-    h1 {
-      color: var(--blue);
-      font-size: 2.15em;
-      line-height: 1.22;
-      margin: 12px 0;
-    }
-
-    h2 {
-      color: var(--blue);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-bottom: 3px solid var(--blue);
-      padding-bottom: 10px;
-      margin: 0 0 18px;
-      line-height: 1.3;
-    }
-
-    h3 {
-      color: var(--blue);
-      margin: 0 0 9px;
-      line-height: 1.3;
-    }
-
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 18px;
-    }
-
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: auto;
-    }
-
-    .skip-link:focus {
-      left: 12px;
-      top: 12px;
-      background: var(--white);
-      color: var(--black);
-      padding: 10px 14px;
-      border: 2px solid var(--blue);
-      z-index: 9999;
-    }
-
-    .top-contact {
-      background: var(--black);
-      color: var(--white);
-      font-size: 0.94em;
-    }
-
-    .top-contact-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      padding-top: 9px;
-      padding-bottom: 9px;
-    }
-
-    .top-contact a {
-      color: var(--white);
-    }
-
-    .topbar {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 13px 0;
-      flex-wrap: wrap;
-    }
-
-    .nav-left {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .nav-left strong {
-      color: var(--blue);
-      font-size: 1.05em;
-    }
-
-    .muted {
-      color: var(--gray);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 4px;
-      font-size: 0.93em;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus {
-      border-bottom-color: var(--blue);
-    }
-
-    .nav-cta {
-      display: flex;
-      gap: 9px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 11px 15px;
-      border-radius: 7px;
-      border: 2px solid var(--blue);
-      background: var(--white);
-      color: var(--blue);
-      text-decoration: none;
-      font-weight: bold;
-      margin: 4px;
-    }
-
-    .btn:hover,
-    .btn:focus {
-      background: var(--blue);
-      color: var(--white);
-    }
-
-    .btn-primary {
-      border-color: var(--green);
-      background: var(--green);
-      color: var(--white);
-    }
-
-    .btn-primary:hover,
-    .btn-primary:focus {
-      background: #205e30;
-      border-color: #205e30;
-    }
-
-    .btn-dark {
-      border-color: var(--black);
-      background: var(--black);
-      color: var(--white);
-    }
-
-    .btn-dark:hover,
-    .btn-dark:focus {
-      background: var(--blue);
-      border-color: var(--blue);
-    }
-
-    .hero {
-      background:
-        linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.94)),
-        url("hero.jpg");
-      background-size: cover;
-      background-position: center;
-      border-bottom: 5px solid var(--blue);
-      padding: 48px 0 40px;
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 250px 1fr;
-      gap: 26px;
-      align-items: center;
-    }
-
-    .hero-image {
-      width: 100%;
-      display: block;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.10);
-      background: var(--white);
-    }
-
-    .hero-center {
-      text-align: center;
-    }
-
-    .logo {
-      width: 58%;
-      max-width: 560px;
-      min-width: 280px;
-      height: auto;
-      display: block;
-      margin: 0 auto 14px;
-    }
-
-    .hero-subline {
-      color: var(--dark-gray);
-      font-size: 1.08em;
-      max-width: 850px;
-      margin: 0 auto 18px;
-    }
-
-    .hero-box {
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 6px solid var(--green);
-      border-radius: 10px;
-      padding: 18px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-
-    .hero-actions {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .hero-contact {
-      margin-top: 12px;
-      color: var(--dark-gray);
-    }
-
-    .trust-strip {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .trust-item {
-      padding: 19px 12px;
-      text-align: center;
-      color: var(--blue);
-      font-weight: bold;
-      border-right: 1px solid var(--border);
-    }
-
-    .trust-item:last-child {
-      border-right: none;
-    }
-
-    .section {
-      padding: 34px 0;
-    }
-
-    .section-tight {
-      padding-top: 0;
-    }
-
-    .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-      padding: 34px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 22px;
-      align-items: start;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
-
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .tile {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 18px;
-    }
-
-    .tile p:last-child {
-      margin-bottom: 0;
-    }
-
-    .service-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 7px 18px rgba(0,0,0,0.05);
-    }
-
-    .service-card p {
-      flex-grow: 1;
-    }
-
-    .service-card .btn {
-      margin-left: 0;
-      margin-right: 0;
-      text-align: center;
-    }
-
-    .notice {
-      background: #f8f8f8;
-      border: 1px solid var(--border);
-      border-left: 6px solid var(--blue);
-      border-radius: 8px;
-      padding: 15px 17px;
-      margin: 18px 0;
-      line-height: 1.65;
-    }
-
-    .success {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 6px solid var(--green);
-      border-radius: 8px;
-      padding: 15px 17px;
-      margin: 18px 0;
-      line-height: 1.65;
-    }
-
-    .warning {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 6px solid #9a5b00;
-      border-radius: 8px;
-      padding: 15px 17px;
-      margin: 18px 0;
-      line-height: 1.65;
-    }
-
-    .check-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .check-list li {
-      position: relative;
-      padding-left: 28px;
-      margin-bottom: 11px;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--green);
-      font-weight: bold;
-    }
-
-    .attorney-panel {
-      background: var(--dark-blue);
-      color: var(--white);
-      border-radius: 12px;
-      padding: 32px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-    }
-
-    .attorney-panel h2,
-    .attorney-panel h3 {
-      color: var(--white);
-      border-color: var(--white);
-    }
-
-    .attorney-panel a:not(.btn) {
-      color: var(--white);
-    }
-
-    .process-step {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 19px;
-    }
-
-    .step-number {
-      display: inline-block;
-      width: 34px;
-      height: 34px;
-      line-height: 34px;
-      text-align: center;
-      border-radius: 50%;
-      background: var(--blue);
-      color: var(--white);
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .owner-photo {
-      width: 100%;
-      max-width: 390px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-    }
-
-    .photo-caption {
-      text-align: center;
-      color: var(--gray);
-      margin-top: 10px;
-      font-size: 0.94em;
-    }
-
-    .city-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 11px;
-    }
-
-    .city-link {
-      display: block;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 12px 9px;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .city-link:hover,
-    .city-link:focus {
-      border-color: var(--blue);
-      background: var(--light-gray);
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
-
-    .testimonial {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 18px;
-    }
-
-    .quote {
-      font-style: italic;
-      margin-top: 0;
-    }
-
-    .who {
-      color: var(--blue);
-      font-weight: bold;
-      margin-bottom: 0;
-    }
-
-    .downloads-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .download-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 17px;
-    }
-
-    .download-item h3 {
-      color: var(--black);
-      font-size: 1em;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .gallery-image {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      background: #eeeeee;
-    }
-
-    .cta {
-      background: var(--black);
-      color: var(--white);
-      text-align: center;
-      padding: 45px 20px;
-    }
-
-    .cta h2 {
-      color: var(--white);
-      border-color: var(--white);
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta p {
-      max-width: 840px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta a:not(.btn) {
-      color: var(--white);
-    }
-
-    .footer {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 28px;
-      padding: 32px 0 22px;
-    }
-
-    .footer h3 {
-      color: var(--blue);
-      font-size: 1em;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .footer-links a {
-      font-weight: normal;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      border-top: 1px solid var(--border);
-      color: var(--gray);
-      padding: 18px 0 25px;
-      font-size: 0.92em;
-      line-height: 1.65;
-    }
-
-    @media (max-width: 1000px) {
-      .hero-inner {
-        grid-template-columns: 210px 1fr;
-      }
-
-      .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .city-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 820px) {
-      .hero-inner,
-      .grid-2,
-      .grid-3,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-image {
-        max-width: 350px;
-        margin: 0 auto;
-      }
-
-      .trust-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .trust-item:nth-child(2) {
-        border-right: none;
-      }
-
-      .trust-item:nth-child(1),
-      .trust-item:nth-child(2) {
-        border-bottom: 1px solid var(--border);
-      }
-
-      .nav {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .nav-left {
-        width: 100%;
-      }
-
-      .nav-links,
-      .nav-cta {
-        justify-content: center;
-      }
-
-      .top-contact-inner {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .logo {
-        width: 82%;
-      }
-
-      .card {
-        padding: 24px;
-      }
-
-      h1 {
-        font-size: 1.75em;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .trust-grid,
-      .grid-4,
-      .city-grid,
-      .testimonials-grid,
-      .downloads-grid,
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .trust-item {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .trust-item:last-child {
-        border-bottom: none;
-      }
-
-      .logo {
-        min-width: 0;
-        width: 96%;
-      }
-
-      .btn {
-        display: block;
-        max-width: 330px;
-        margin: 9px auto;
-        text-align: center;
-      }
-
-      .hero {
-        padding: 38px 0 32px;
-      }
-    }
-  
-    .nav-cta .btn { display: inline-block; padding: 10px 15px; border-radius: 7px; text-decoration: none; font-weight: bold; }
-    .nav-cta .btn-primary { background: var(--green, #2a7a3f); border: 2px solid var(--green, #2a7a3f); color: #fff; }
-    .nav-cta .btn-primary:hover, .nav-cta .btn-primary:focus { background: #205e30; border-color: #205e30; color: #fff; }
-    .nav-links a[aria-current="page"] { border-bottom-color: var(--blue, #1f3a5f); font-weight: bold; }
-    /* Phone-only Call button in header */
-    .header-call { display: none; }
-    @media (max-width: 820px) {
-      .header-call {
-        display: inline-flex; align-items: center; gap: 5px; margin-left: auto;
-        padding: 8px 12px; border-radius: 7px; text-decoration: none; font-weight: bold;
-        background: var(--green, #2a7a3f); border: 2px solid var(--green, #2a7a3f); color: #fff;
-      }
-      .nav { column-gap: 8px; row-gap: 0; flex-wrap: wrap; }
-      .nav .nav-left { flex: 1 1 0; width: auto; min-width: 0; }
-      .nav .header-call, .nav .menu-toggle { flex: none; }
-      .nav .nav-left strong { font-size: 1em; }
-      .nav .nav-left strong, .nav .nav-left .muted { display: block; line-height: 1.25; }
-      .nav .menu-toggle { padding: 8px 12px; }
-    }
-    /* Mobile menu */
-    .menu-toggle { display: none; }
-    @media (max-width: 820px) {
-      .nav { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; text-align: left; }
-      .nav-left { width: auto; flex: 1 1 0; min-width: 0; }
-      .nav-left .muted { display: block; }
-      .menu-toggle {
-        display: inline-flex; align-items: center; gap: 6px;
-        padding: 9px 14px; border: 2px solid var(--blue, #1f3a5f); border-radius: 7px;
-        background: #fff; color: var(--blue, #1f3a5f); font: inherit; font-weight: bold; cursor: pointer;
-      }
-      .nav .nav-links, .nav .nav-cta { display: none; width: 100%; }
-      .nav.nav-open .nav-links { display: flex; flex-direction: column; align-items: stretch; gap: 0; margin-top: 10px; }
-      .nav.nav-open .nav-links a { padding: 12px 4px; border-bottom: 1px solid #e3e3e3; font-size: 1em; }
-      .nav.nav-open .nav-cta { display: block; margin-top: 8px; }
-    }
-
-    /* Mobile homepage: headline and buttons first */
-    @media (max-width: 820px) {
-      .top-contact-inner > div:first-child { display: none; }
-      .hero { padding: 22px 0 28px; }
-      .hero-inner > div:first-child { order: 2; }
-      .hero-center { order: 1; }
-      .hero-image { max-width: 260px; margin: 10px auto 0; }
-      .logo { width: 55%; min-width: 0; max-width: 240px; margin-bottom: 10px; }
-    }
+:root {
+  --ink: #14202e;
+  --ink-2: #2b3a4b;
+  --slate: #5a6877;
+  --bond: #f3f5f2;
+  --white: #ffffff;
+  --rule: #d7ddd8;
+  --docket: #1f5a44;
+  --docket-dark: #174535;
+  --serif: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --sans: "Public Sans", "Segoe UI", Arial, sans-serif;
+  --wrap: 1140px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--white);
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--docket); }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid #2f7dd1;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.wrap { width: min(100% - 40px, var(--wrap)); margin-inline: auto; }
+
+.skip {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--ink); color: var(--white); padding: 10px 16px; z-index: 100;
+}
+.skip:focus { left: 12px; top: 12px; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; margin: 0; }
+h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); letter-spacing: -0.01em; }
+h3 { font-size: 1.3rem; }
+p { margin: 0; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; min-height: 48px; padding: 0 22px;
+  font: 600 1rem/1 var(--sans); text-decoration: none;
+  border-radius: 6px; border: 2px solid transparent;
+  transition: background-color .15s ease;
+}
+.btn-primary { background: var(--docket); color: var(--white); }
+.btn-primary:hover { background: var(--docket-dark); }
+.btn-ghost { border-color: currentColor; color: var(--ink); background: transparent; }
+.btn-ghost:hover { background: rgba(20, 32, 46, .06); }
+.on-ink .btn-ghost { color: var(--white); }
+.on-ink .btn-ghost:hover { background: rgba(255,255,255,.08); }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid var(--rule);
+}
+.header-row { display: flex; align-items: center; gap: 28px; min-height: 76px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.brand img { height: 52px; width: auto; }
+.brand span { font-family: var(--serif); font-size: 1.15rem; line-height: 1.1; }
+.brand small { display: block; font-family: var(--sans); font-size: .78rem; color: var(--slate); }
+.nav { display: flex; gap: 22px; margin-left: auto; }
+.nav a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .96rem; }
+.nav a:hover { color: var(--docket); text-decoration: underline; text-underline-offset: 4px; }
+.header-actions { display: flex; align-items: center; gap: 14px; }
+.header-phone { color: var(--ink); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.header-actions .btn { min-height: 42px; padding: 0 16px; font-size: .95rem; }
+
+.menu { display: none; margin-left: auto; position: relative; }
+.menu summary {
+  list-style: none; cursor: pointer; font-weight: 600;
+  border: 2px solid var(--ink); border-radius: 6px; padding: 8px 14px;
+}
+.menu summary::-webkit-details-marker { display: none; }
+.menu-panel {
+  position: absolute; right: 0; top: calc(100% + 10px);
+  width: min(86vw, 320px); background: var(--white);
+  border: 1px solid var(--rule); border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(20,32,46,.16);
+  padding: 10px; display: grid;
+}
+.menu-panel a { padding: 12px 12px; color: var(--ink); text-decoration: none; border-radius: 6px; font-weight: 500; }
+.menu-panel a:hover { background: var(--bond); }
+
+/* Hero */
+.hero { background: var(--ink); color: var(--white); padding: 84px 0 96px; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; }
+.hero h1 { font-size: clamp(2.5rem, 5.4vw, 4.1rem); letter-spacing: -0.015em; max-width: 15ch; }
+.hero-lede { margin-top: 24px; font-size: 1.15rem; color: #d3dae2; max-width: 46ch; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+.hero-note { margin-top: 22px; color: #a9b5c2; font-size: .95rem; }
+.hero-note a { color: var(--white); }
+
+/* The record: signature element */
+.record {
+  background: var(--white); color: var(--ink);
+  border-radius: 4px; padding: 30px 30px 26px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+  transform: rotate(1.2deg);
+  position: relative;
+}
+.record::before {
+  content: ""; position: absolute; inset: 10px -10px -10px 10px;
+  background: #e7ebe6; border-radius: 4px; z-index: -1; transform: rotate(-2.4deg);
+}
+.record-head { border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 6px; }
+.record-head h2 { font-size: 1.45rem; }
+.record-head p { font-size: .85rem; color: var(--slate); margin-top: 4px; }
+.record table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.record th { text-align: left; font-weight: 600; color: var(--slate); font-size: .78rem; padding: 10px 8px 6px 0; }
+.record td { padding: 9px 8px 9px 0; border-top: 1px solid var(--rule); vertical-align: top; }
+.record td:first-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.record .served td { font-weight: 600; }
+.stamp {
+  display: inline-block; margin-top: 16px;
+  font-family: var(--serif); font-size: 1.05rem; color: var(--docket);
+  border: 2px solid var(--docket); border-radius: 4px; padding: 4px 12px;
+  transform: rotate(-3deg);
+}
+.record-foot { margin-top: 14px; font-size: .8rem; color: var(--slate); }
+
+/* Sections */
+.section { padding: 92px 0; }
+.section-bond { background: var(--bond); }
+.section-head { max-width: 640px; margin-bottom: 44px; }
+.section-head p { margin-top: 14px; color: var(--slate); font-size: 1.08rem; }
+
+/* Audience doors */
+.doors { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.door {
+  background: var(--white); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 34px; display: flex; flex-direction: column;
+}
+.door h3 { font-size: 1.6rem; }
+.door p { margin-top: 12px; color: var(--ink-2); }
+.door ul { margin: 18px 0 26px; padding-left: 20px; color: var(--ink-2); }
+.door li { margin: 6px 0; }
+.door .btn { margin-top: auto; align-self: flex-start; }
+
+/* Rate list */
+.rates { border-top: 2px solid var(--ink); }
+.rate {
+  display: grid; grid-template-columns: 1fr auto; gap: 8px 40px;
+  padding: 26px 0; border-bottom: 1px solid var(--rule);
+  text-decoration: none; color: var(--ink);
+}
+.rate:hover h3 { color: var(--docket); text-decoration: underline; text-underline-offset: 5px; }
+.rate p { grid-column: 1; color: var(--slate); max-width: 62ch; }
+.rate .price { grid-column: 2; grid-row: 1 / span 2; text-align: right; align-self: center; }
+.price strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.7rem; line-height: 1.1; }
+.price span { display: block; font-size: .85rem; color: var(--slate); }
+.rates-note { margin-top: 22px; color: var(--slate); font-size: .95rem; }
+
+/* Process */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; counter-reset: step; }
+.step { border-top: 2px solid var(--ink); padding-top: 18px; }
+.step::before {
+  counter-increment: step; content: counter(step);
+  font-family: var(--serif); font-size: 2.4rem; line-height: 1; color: var(--docket);
+  display: block; margin-bottom: 12px;
+}
+.step p { margin-top: 8px; color: var(--ink-2); }
+
+/* Testimonials */
+.quotes { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: start; }
+.quote-main blockquote {
+  margin: 0; font-family: var(--serif); font-size: clamp(1.6rem, 2.8vw, 2.2rem); line-height: 1.3;
+}
+.quote-main cite, .quote-list cite { display: block; margin-top: 16px; font-style: normal; color: var(--slate); }
+.quote-list { display: grid; gap: 26px; }
+.quote-list blockquote { margin: 0; padding-left: 20px; border-left: 3px solid var(--docket); font-size: 1.05rem; }
+.quote-list cite { margin-top: 6px; font-size: .92rem; }
+
+/* Owner */
+.owner { display: grid; grid-template-columns: 340px 1fr; gap: 64px; align-items: center; }
+.owner img { border-radius: 6px; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; }
+.owner-text p { margin-top: 16px; color: var(--ink-2); max-width: 60ch; }
+.owner-text .btn { margin-top: 28px; }
+
+/* Area */
+.area { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; }
+.area p { margin-top: 14px; color: var(--slate); }
+.cities { display: flex; flex-wrap: wrap; gap: 10px; align-content: flex-start; }
+.cities a {
+  padding: 9px 16px; border: 1px solid var(--rule); border-radius: 999px;
+  text-decoration: none; color: var(--ink); background: var(--white); font-weight: 500;
+}
+.cities a:hover { border-color: var(--docket); color: var(--docket); }
+
+/* Resources */
+.resources { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.resource { border-top: 2px solid var(--ink); padding-top: 20px; }
+.resource p { margin-top: 10px; color: var(--ink-2); }
+.resource a.more { display: inline-block; margin-top: 14px; font-weight: 600; }
+
+/* Boundaries */
+.boundaries {
+  border: 1px solid var(--rule); border-radius: 8px; padding: 28px 32px;
+  display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; background: var(--white);
+}
+.boundaries h2 { font-size: 1.35rem; }
+.boundaries p { color: var(--ink-2); font-size: .98rem; }
+
+/* CTA */
+.cta { background: var(--ink); color: var(--white); padding: 84px 0; }
+.cta-row { display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap; }
+.cta h2 { max-width: 18ch; }
+.cta p { margin-top: 14px; color: #c9d1da; max-width: 52ch; }
+.cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Footer */
+.footer { background: #0f1923; color: #b9c3cd; padding: 64px 0 40px; font-size: .95rem; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
+.footer img { height: 58px; width: auto; margin-bottom: 16px; }
+.footer h3 { font-family: var(--sans); font-size: .95rem; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+.footer ul { list-style: none; margin: 0; padding: 0; }
+.footer li { margin: 7px 0; }
+.footer a { color: #dfe5eb; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.footer address { font-style: normal; line-height: 1.7; }
+.footer-legal { margin-top: 48px; padding-top: 22px; border-top: 1px solid #26333f; font-size: .85rem; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+/* Mobile call bar */
+.callbar { display: none; }
+
+@media (max-width: 1060px) {
+  .nav, .header-phone { display: none; }
+  .menu { display: block; }
+  .header-actions { margin-left: 0; }
+}
+
+@media (max-width: 900px) {
+  body { font-size: 16px; }
+  .hero { padding: 56px 0 72px; }
+  .hero-grid, .doors, .quotes, .owner, .area, .resources { grid-template-columns: 1fr; }
+  .hero-grid { gap: 52px; }
+  .record { transform: none; max-width: 520px; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .owner img { max-width: 320px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .section { padding: 68px 0; }
+}
+
+@media (max-width: 600px) {
+  .header-actions .btn { display: none; }
+  .brand img { height: 44px; }
+  .steps { grid-template-columns: 1fr; }
+  .rate { grid-template-columns: 1fr; }
+  .rate .price { grid-column: 1; grid-row: auto; text-align: left; }
+  .price { margin-top: 6px; }
+  .price strong { font-size: 1.35rem; }
+  .boundaries { grid-template-columns: 1fr; padding: 24px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .door { padding: 26px; }
+  .record { padding: 22px 18px; }
+  .record table { font-size: .84rem; }
+  .callbar {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: var(--white); border-top: 1px solid var(--rule);
+    box-shadow: 0 -8px 24px rgba(20,32,46,.12);
+  }
+  .callbar .btn { min-height: 46px; }
+  body { padding-bottom: 72px; }
+}
   </style>
+
 
   <script type="application/ld+json">
   {
@@ -972,1263 +485,386 @@
     }
   }
   </script>
-  <style>
-    /* Research Library header button */
-    .nav-cta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-    .nav-cta .btn-library { background: #fff; border: 2px solid var(--blue, #1f3a5f); color: var(--blue, #1f3a5f); }
-    .nav-cta .btn-library:hover, .nav-cta .btn-library:focus { background: var(--blue, #1f3a5f); color: #fff; }
-    .header-library { display: none; }
-    @media (max-width: 820px) {
-      .header-library {
-        display: inline-flex; align-items: center; flex: none;
-        padding: 8px 10px; border-radius: 7px; text-decoration: none; font-weight: bold;
-        background: #fff; border: 2px solid var(--blue, #1f3a5f); color: var(--blue, #1f3a5f);
-      }
-      .nav .header-call { margin-left: 0; }
-      .nav.nav-open .nav-cta { display: flex; }
-      .nav-cta .btn-library { display: none; }
-    }
-    @media (max-width: 420px) {
-      .header-library, .nav .header-call, .nav .menu-toggle { padding: 7px 8px; font-size: 0.92em; }
-      .header-library .hl-icon { display: none; }
-    }
-  </style>
 </head>
-
 <body>
 
-  <a class="skip-link" href="#main-content">
-    Skip to main content
-  </a>
+<a class="skip" href="#main">Skip to main content</a>
 
-  <div class="top-contact">
-    <div class="container">
-      <div class="top-contact-inner">
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="Paper Chasers LLC home">
+      <img src="logo-mark.png" alt="" width="243" height="176" />
+      <span>Paper Chasers LLC<small>Appleton, Wisconsin</small></span>
+    </a>
 
-        <div>
-          Professional Administrative &amp; Litigation Support Services
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="attorney-law-firm-services.html">For attorneys</a>
+      <a href="fees.html">Fees</a>
+      <a href="service-area.html">Service area</a>
+      <a href="articles.html">Library</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+19205728646">(920) 572-8646</a>
+      <a class="btn btn-primary" href="request.html">Request service</a>
+    </div>
+
+    <details class="menu">
+      <summary>Menu</summary>
+      <div class="menu-panel">
+        <a href="process-service.html">Process service</a>
+        <a href="courier-document-delivery.html">Courier &amp; filings</a>
+        <a href="administrative-support.html">Administrative support</a>
+        <a href="attorney-law-firm-services.html">For attorneys</a>
+        <a href="clemency-assistance.html">Pardon application support</a>
+        <a href="abandoned-vehicles.html">Vehicle title assistance</a>
+        <a href="fees.html">Fees</a>
+        <a href="service-area.html">Service area</a>
+        <a href="articles.html">Research library</a>
+        <a href="about.html">About</a>
+        <a href="request.html">Request service</a>
+        <a href="tel:+19205728646">Call or text (920) 572-8646</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero on-ink">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Papers served. Filings delivered. Every attempt on record.</h1>
+        <p class="hero-lede">
+          Process service, legal courier, and administrative support for
+          attorneys, businesses, and families across the Fox Valley and
+          throughout Wisconsin. Scope and price in writing before we start.
+          Proof in your hands when we finish.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="request.html">Request service</a>
+          <a class="btn btn-ghost" href="tel:+19205728646">Call or text (920) 572-8646</a>
         </div>
+        <p class="hero-note">
+          Professional first. Dependable always.
+          Starting prices are <a href="fees.html">published here</a>.
+        </p>
+      </div>
 
-        <div>
-          Call or Text:
-          <a href="tel:+19205728646">(920) 572-8646</a>
-          &nbsp; | &nbsp;
-          <a href="mailto:info@paperchasersllc.com">
-            info@paperchasersllc.com
-          </a>
+      <figure class="record" aria-label="Sample attempt record">
+        <div class="record-head">
+          <h2>Record of service attempts</h2>
+          <p>Sample — Small claims summons, Outagamie County</p>
         </div>
+        <table>
+          <thead>
+            <tr><th scope="col">When</th><th scope="col">Result</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mon 6:42 PM</td><td>No answer. Two vehicles in drive. Photo logged.</td></tr>
+            <tr><td>Tue 7:15 AM</td><td>Adult resident confirms subject lives here, at work until 5.</td></tr>
+            <tr class="served"><td>Wed 5:58 PM</td><td>Personally served on named defendant.</td></tr>
+          </tbody>
+        </table>
+        <span class="stamp">Affidavit returned same day</span>
+        <figcaption class="record-foot">
+          Illustration only. Every assignment gets a dated attempt record you can rely on.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
 
+  <section class="section section-bond" aria-labelledby="doors-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="doors-title">Who we work for</h2>
+        <p>Two kinds of clients, one standard: confirm the scope, do the work, document the result.</p>
+      </div>
+      <div class="doors">
+        <article class="door">
+          <h3>Attorneys &amp; businesses</h3>
+          <p>Dependable local coverage when your office can't be in two places at once.</p>
+          <ul>
+            <li>Routine, rush, and same-day process service</li>
+            <li>Courthouse filings, retrievals, and law-office runs</li>
+            <li>Case-file, exhibit, and records organization</li>
+            <li>Fox Valley coverage for out-of-area firms</li>
+          </ul>
+          <a class="btn btn-primary" href="attorney-law-firm-services.html">Attorney services</a>
+        </article>
+        <article class="door">
+          <h3>Individuals &amp; families</h3>
+          <p>Help with the paperwork side of a court case or agency process, explained in plain language.</p>
+          <ul>
+            <li>Serving papers in small claims, eviction, and family matters</li>
+            <li>Organizing Wisconsin pardon applications</li>
+            <li>Abandoned vehicle and missing-title paperwork</li>
+            <li>We handle documents. Legal advice stays with an attorney.</li>
+          </ul>
+          <a class="btn btn-ghost" href="request.html">Start a request</a>
+        </article>
       </div>
     </div>
-  </div>
+  </section>
 
-  <header class="topbar">
-    <div class="container">
-      <nav class="nav" aria-label="Primary navigation">
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="services-title">Services and starting prices</h2>
+        <p>Final pricing depends on location, deadline, and volume. You get it in writing before any work begins.</p>
+      </div>
 
-        <div class="nav-left">
-          <strong>Paper Chasers LLC</strong>
-          <span class="muted">Appleton, Wisconsin</span>
+      <div class="rates">
+        <a class="rate" href="process-service.html">
+          <h3>Wisconsin process service</h3>
+          <p>Residential and business service with documented attempts and a completed affidavit. Rush and same-day available.</p>
+          <div class="price"><strong>From $100</strong><span>Up to 3 attempts</span></div>
+        </a>
+        <a class="rate" href="courier-document-delivery.html">
+          <h3>Legal courier &amp; court filings</h3>
+          <p>Courthouse runs, filing delivery, records pickup, and agency and law-office exchanges.</p>
+          <div class="price"><strong>From $65</strong><span>Next-business-day delivery</span></div>
+        </a>
+        <a class="rate" href="administrative-support.html">
+          <h3>Administrative support</h3>
+          <p>Document organization, correspondence, timelines, forms assistance, and project tracking.</p>
+          <div class="price"><strong>From $65/hr</strong><span>Formatting and filing prep</span></div>
+        </a>
+        <a class="rate" href="attorney-law-firm-services.html">
+          <h3>Attorney &amp; law firm support</h3>
+          <p>Exhibits, chronologies, document inventories, and attorney-directed research under supervising counsel.</p>
+          <div class="price"><strong>From $75/hr</strong><span>Attorney-directed research</span></div>
+        </a>
+        <a class="rate" href="clemency-assistance.html">
+          <h3>Wisconsin pardon application support</h3>
+          <p>Organizing applications, personal histories, supporting records, and references.</p>
+          <div class="price"><strong>From $450</strong><span>Standard package</span></div>
+        </a>
+        <a class="rate" href="abandoned-vehicles.html">
+          <h3>Abandoned vehicle title assistance</h3>
+          <p>Vehicle records, notice materials, and missing-title and bonded-title paperwork.</p>
+          <div class="price"><strong>Quoted</strong><span>Per vehicle</span></div>
+        </a>
+      </div>
+      <p class="rates-note">See every rate, deposit, and travel policy on the <a href="fees.html">fees page</a>.</p>
+    </div>
+  </section>
+
+  <section class="section section-bond" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="process-title">How an assignment works</h2>
+      </div>
+      <ol class="steps" role="list" style="list-style:none;margin:0;padding:0;">
+        <li class="step">
+          <h3>Send the request</h3>
+          <p>Use the form, call, or text. Tell us the task, location, deadline, and what you need back.</p>
+        </li>
+        <li class="step">
+          <h3>Get scope and price in writing</h3>
+          <p>We confirm what's included, the timeline, and the cost. Nothing starts until you agree.</p>
+        </li>
+        <li class="step">
+          <h3>We do the work</h3>
+          <p>You hear from us when anything changes: a failed attempt, a delay, or missing information.</p>
+        </li>
+        <li class="step">
+          <h3>You get the proof</h3>
+          <p>Affidavits, delivery confirmations, receipts, and finished documents, ready for your file.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="quotes-title">
+    <div class="wrap">
+      <h2 id="quotes-title" class="section-head">What clients say</h2>
+      <div class="quotes">
+        <figure class="quote-main" style="margin:0">
+          <blockquote>“No guessing, no surprises. Clear expectations with clean execution.”</blockquote>
+          <cite>Tanya N.</cite>
+        </figure>
+        <div class="quote-list">
+          <figure style="margin:0">
+            <blockquote>“Detail-oriented and reliable. Everything was documented and handled professionally.”</blockquote>
+            <cite>AL, professional services client</cite>
+          </figure>
+          <figure style="margin:0">
+            <blockquote>“Fast communication, clear scope, and exactly what was promised, delivered in a timely manner.”</blockquote>
+            <cite>SUBdued Entertainment, small business client</cite>
+          </figure>
+          <figure style="margin:0">
+            <blockquote>“Discreet, efficient, and organized. I would use again.”</blockquote>
+            <cite>Kevin S.</cite>
+          </figure>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <a class="header-call" href="tel:+19205728646" aria-label="Call Paper Chasers LLC at (920) 572-8646">&#9742; Call</a>
-        <a class="header-library" href="articles.html"><span class="hl-icon" aria-hidden="true">&#128218; </span>Library</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">&#9776; Menu</button>
-        <div class="nav-links" id="site-menu">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="about.html">About</a>
-          <a href="service-area.html">Service Area</a>
-          <a href="process-service.html">Process Service</a>
-          <a href="administrative-support.html">Administrative Support</a>
-          <a href="courier-document-delivery.html">Courier</a>
-          <a href="attorney-law-firm-services.html">Attorney Services</a>
-          <a href="clemency-assistance.html">Pardon Support</a>
-          <a href="abandoned-vehicles.html">Vehicle Titles</a>
-          <a href="fees.html">Fees</a>
-        </div>
+  <section class="section section-bond" aria-labelledby="owner-title">
+    <div class="wrap owner">
+      <img src="mike-winius-720.jpg" alt="Michael Winius, owner of Paper Chasers LLC" width="720" height="1080" />
+      <div class="owner-text">
+        <h2 id="owner-title">You work with Michael Winius, start to finish</h2>
+        <p>
+          Paper Chasers LLC is owned and operated by Michael Winius, a litigation
+          paralegal based in Appleton. One person takes your call, confirms the
+          assignment, does the work, and sends you the record.
+        </p>
+        <p>
+          Michael built the company around firsthand experience with deadlines,
+          public agencies, court procedure, and the paperwork that keeps a matter
+          moving. He also hosts The People's Paralegal, a free YouTube series on
+          Wisconsin court records, supervision, and reentry.
+        </p>
+        <a class="btn btn-ghost" href="about.html">About Paper Chasers</a>
+      </div>
+    </div>
+  </section>
 
-        <div class="nav-cta">
-          <a class="btn btn-library" href="articles.html">Research Library</a>
-          <a class="btn btn-primary" href="request.html">Request Service</a>
-        </div>
-
+  <section class="section" aria-labelledby="area-title">
+    <div class="wrap area">
+      <div>
+        <h2 id="area-title">Based in Appleton, serving Wisconsin</h2>
+        <p>
+          We regularly cover the Fox Valley and surrounding counties. Assignments
+          elsewhere in Wisconsin are accepted depending on distance, deadline, and availability.
+        </p>
+        <p><a href="service-area.html">See the full service area</a></p>
+      </div>
+      <nav class="cities" aria-label="Service area cities">
+        <a href="appleton-process-service.html">Appleton</a>
+        <a href="green-bay-process-service.html">Green Bay</a>
+        <a href="oshkosh-process-service.html">Oshkosh</a>
+        <a href="neenah-process-service.html">Neenah</a>
+        <a href="menasha-process-service.html">Menasha</a>
+        <a href="kaukauna-process-service.html">Kaukauna</a>
+        <a href="new-london-process-service.html">New London</a>
+        <a href="seymour-process-service.html">Seymour</a>
+        <a href="chilton-process-service.html">Chilton</a>
+        <a href="brillion-process-service.html">Brillion</a>
+        <a href="new-holstein-process-service.html">New Holstein</a>
+        <a href="shawano-process-service.html">Shawano</a>
+        <a href="clintonville-process-service.html">Clintonville</a>
+        <a href="waupaca-process-service.html">Waupaca</a>
+        <a href="wisconsin-process-service.html">Statewide</a>
       </nav>
     </div>
-  </header>
+  </section>
 
-  <main id="main-content">
-
-    <section class="hero">
-      <div class="container">
-
-        <div class="hero-inner">
-
-          <div>
-            <img
-              src="hero-legal.jpg"
-              alt="Paper Chasers LLC professional administrative and litigation support services"
-              class="hero-image"
-            />
-          </div>
-
-          <div class="hero-center">
-
-            <img
-              src="paper-chasers-logo.png"
-              alt="Paper Chasers LLC logo"
-              class="logo"
-            />
-
-            <h1>
-              Professional Administrative &amp; Litigation Support Services Throughout Wisconsin
-            </h1>
-
-            <p class="hero-subline">
-              Process service, legal courier and document delivery,
-              administrative support, attorney and law firm support, Wisconsin
-              pardon application assistance, and abandoned vehicle title
-              assistance.
-            </p>
-
-            <div class="hero-box">
-
-              <strong>Professional first. Dependable always.</strong>
-
-              <p>
-                Paper Chasers LLC helps attorneys, businesses, families,
-                individuals, property professionals, and organizations move
-                important documents and administrative assignments forward
-                through clear communication and documented follow-through.
-              </p>
-
-              <div class="hero-actions">
-
-                <a class="btn btn-primary" href="request.html">
-                  Request Service
-                </a>
-
-                <a class="btn btn-dark" href="tel:+19205728646">
-                  Call Us
-                </a>
-
-                <a class="btn btn-dark" href="sms:+19205728646">
-                  Text Us
-                </a>
-
-                <a class="btn" href="fees.html">
-                  View Fees
-                </a>
-
-              </div>
-
-              <div class="hero-contact">
-                <strong>Call or Text:</strong> (920) 572-8646
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
+  <section class="section section-bond" aria-labelledby="resources-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="resources-title">Free Wisconsin resources</h2>
+        <p>Plain-language education, not legal advice.</p>
       </div>
-    </section>
-
-    <section class="trust-strip" aria-label="Paper Chasers service standards">
-      <div class="container">
-
-        <div class="trust-grid">
-
-          <div class="trust-item">
-            Clear Scope
-          </div>
-
-          <div class="trust-item">
-            Direct Communication
-          </div>
-
-          <div class="trust-item">
-            Documented Follow-Through
-          </div>
-
-          <div class="trust-item">
-            Wisconsin-Based Service
-          </div>
-
-        </div>
-
+      <div class="resources">
+        <article class="resource">
+          <h3>Research library</h3>
+          <p>Articles and PDF guides on pardons, expungement, sentence modification, CCAP, and public records, with the statutes and cases cited.</p>
+          <a class="more" href="articles.html">Browse the library</a>
+        </article>
+        <article class="resource">
+          <h3>The People's Paralegal</h3>
+          <p>Short videos that explain Wisconsin court records, supervision, and process service in everyday terms.</p>
+          <a class="more" href="https://www.youtube.com/@ThePeoplesParalegal">Watch on YouTube</a>
+        </article>
+        <article class="resource">
+          <h3>After the Gate</h3>
+          <p>Michael's practical reentry guide. Sponsor a copy for a Wisconsin correctional library for $10.</p>
+          <a class="more" href="after-the-gate.html">About the book</a>
+        </article>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>Professional Support That Moves Work Forward</h2>
-
-          <p>
-            Paper Chasers LLC is an Appleton-based administrative and litigation
-            support company serving attorneys, businesses, property professionals,
-            families, and individuals across the Fox Valley and throughout Wisconsin.
-          </p>
-
-          <p>
-            We handle process-driven, document-heavy work: serving papers, moving
-            documents, organizing records, and completing defined administrative
-            tasks. You get a quick response, a clear scope and price up front,
-            careful work, and a documented result.
-          </p>
-
-          <div class="success">
-            <strong>Our operating standard:</strong> Confirm the scope,
-            confirm the timeline, complete the work, document the result,
-            and communicate clearly.
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight" aria-label="Watch: Paper Chasers LLC and The People's Paralegal">
-      <div class="container">
-
-        <div class="card" style="text-align:center;">
-
-          <h2>Watch: Paper Chasers LLC &amp; The People&#39;s Paralegal</h2>
-
-          <p>
-            A 35-second look at what we do, and at The People&#39;s Paralegal,
-            our free Wisconsin legal education series.
-          </p>
-
-          <div style="max-width:340px;margin:18px auto 0;aspect-ratio:9/16;border-radius:12px;overflow:hidden;">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/KprAtN4CxT0"
-              title="Paper Chasers LLC &amp; The People&#39;s Paralegal"
-              style="width:100%;height:100%;border:0;"
-              loading="lazy"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
-          </div>
-
-          <p style="margin-top:14px;">
-            <a href="https://www.youtube.com/@ThePeoplesParalegal" target="_blank" rel="noopener">YouTube: @ThePeoplesParalegal</a>
-            &nbsp;&bull;&nbsp;
-            <a href="https://www.tiktok.com/@paperchasersllc" target="_blank" rel="noopener">TikTok: @paperchasersllc</a>
-            &nbsp;&bull;&nbsp;
-            <a href="https://www.facebook.com/profile.php?id=61596423324714" target="_blank" rel="noopener">Facebook: Paper Chasers LLC</a>
-            &nbsp;&bull;&nbsp;
-            <a href="https://www.instagram.com/paperchasersllc.wi/" target="_blank" rel="noopener">Instagram: @paperchasersllc.wi</a>
-          </p>
-
-          <p style="font-size:0.85em;opacity:0.8;">
-            Paper Chasers LLC is not a law firm and does not give legal advice.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>Featured Services</h2>
-
-          <p>
-            Select a service below for detailed information about scope,
-            requirements, limitations, and how to request assistance.
-          </p>
-
-          <div class="grid-3">
-
-            <article class="service-card">
-
-              <h3>Wisconsin Process Service</h3>
-
-              <p>
-                Routine, rush, residential, business, and approved
-                difficult-service assignments with documented attempts,
-                communication, and completion records.
-              </p>
-
-              <a class="btn btn-primary" href="process-service.html">
-                View Process Service
-              </a>
-
-            </article>
-
-            <article class="service-card">
-
-              <h3>Legal Courier &amp; Document Delivery</h3>
-
-              <p>
-                Courthouse runs, filing delivery, records pickup, law-office
-                exchanges, agency deliveries, business routes, and
-                time-sensitive document transport.
-              </p>
-
-              <a class="btn btn-primary" href="courier-document-delivery.html">
-                View Courier Services
-              </a>
-
-            </article>
-
-            <article class="service-card">
-
-              <h3>Administrative Support</h3>
-
-              <p>
-                Document organization, correspondence, records coordination,
-                timelines, forms assistance, factual summaries, project
-                tracking, and practical office support.
-              </p>
-
-              <a class="btn btn-primary" href="administrative-support.html">
-                View Administrative Support
-              </a>
-
-            </article>
-
-            <article class="service-card">
-
-              <h3>Attorney &amp; Law Firm Services</h3>
-
-              <p>
-                Process service, local courier assignments, case-file
-                organization, exhibits, records coordination, and
-                attorney-directed administrative research.
-              </p>
-
-              <a class="btn btn-primary" href="attorney-law-firm-services.html">
-                View Attorney Services
-              </a>
-
-            </article>
-
-            <article class="service-card">
-
-              <h3>Wisconsin Pardon Application Support</h3>
-
-              <p>
-                Administrative assistance organizing pardon applications,
-                personal histories, conviction information, supporting records,
-                references, and rehabilitation materials.
-              </p>
-
-              <a class="btn btn-primary" href="clemency-assistance.html">
-                View Pardon Support
-              </a>
-
-            </article>
-
-            <article class="service-card">
-
-              <h3>Abandoned Vehicle Title Assistance</h3>
-
-              <p>
-                Administrative support with vehicle records, notice materials,
-                missing-title situations, bonded-title materials, and
-                abandoned-vehicle documentation.
-              </p>
-
-              <a
-                class="btn btn-primary"
-                href="abandoned-vehicles.html"
-              >
-                View Vehicle Title Support
-              </a>
-
-            </article>
-
-          </div>
-
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>Why Choose Paper Chasers LLC</h2>
-
-          <ul class="check-list">
-            <li>One point of contact who answers</li>
-            <li>Scope and pricing confirmed before work begins</li>
-            <li>Updates whenever anything changes</li>
-            <li>Records of every attempt, delivery, and task</li>
-            <li>Honest expectations, not inflated promises</li>
-          </ul>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="attorney-panel">
-
-          <h2>Support for Attorneys &amp; Law Firms</h2>
-
-          <div class="grid-2">
-
-            <div>
-
-              <p>
-                Paper Chasers LLC provides assignment-based support for
-                Wisconsin attorneys and law firms that need dependable local
-                coverage, document movement, process service, records
-                organization, or administrative assistance.
-              </p>
-
-              <ul>
-                <li>Routine and rush process service</li>
-                <li>Courthouse and law-office courier assignments</li>
-                <li>Client document pickup and records retrieval</li>
-                <li>Case-file and discovery organization</li>
-                <li>Exhibit preparation and indexing</li>
-                <li>Factual chronologies and document inventories</li>
-                <li>Records tracking and project coordination</li>
-                <li>Attorney-directed administrative research support</li>
-              </ul>
-
-            </div>
-
-            <div>
-
-              <h3>Defined Professional Scope</h3>
-
-              <p>
-                Instructions, deadlines, confidentiality, and billing are
-                confirmed up front. We work under the direction of supervising
-                counsel; legal analysis and strategy stay with the attorney.
-              </p>
-
-              <p>
-                <a
-                  class="btn btn-primary"
-                  href="attorney-law-firm-services.html"
-                >
-                  Review Attorney Services
-                </a>
-
-                <a class="btn" href="request.html">
-                  Submit an Assignment
-                </a>
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>How We Work</h2>
-
-          <div class="grid-3">
-
-            <div class="process-step">
-
-              <div class="step-number">1</div>
-
-              <h3>Tell Us What You Need</h3>
-
-              <p>
-                Provide the assignment, location, available documents,
-                deadline, contact information, and expected result.
-              </p>
-
-            </div>
-
-            <div class="process-step">
-
-              <div class="step-number">2</div>
-
-              <h3>We Review the Scope</h3>
-
-              <p>
-                We assess the task, timing, service area, document volume,
-                travel requirements, responsibilities, and limitations.
-              </p>
-
-            </div>
-
-            <div class="process-step">
-
-              <div class="step-number">3</div>
-
-              <h3>Terms Are Confirmed</h3>
-
-              <p>
-                Scope, pricing, payment terms, instructions, deliverables, and
-                scheduling are confirmed before work begins.
-              </p>
-
-            </div>
-
-            <div class="process-step">
-
-              <div class="step-number">4</div>
-
-              <h3>Work Is Performed</h3>
-
-              <p>
-                Paper Chasers LLC completes the accepted service, delivery,
-                organizational, research, or administrative tasks.
-              </p>
-
-            </div>
-
-            <div class="process-step">
-
-              <div class="step-number">5</div>
-
-              <h3>Updates Are Provided</h3>
-
-              <p>
-                Material developments, delays, missing information,
-                unsuccessful attempts, or additional needs are communicated.
-              </p>
-
-            </div>
-
-            <div class="process-step">
-
-              <div class="step-number">6</div>
-
-              <h3>The Assignment Is Closed</h3>
-
-              <p>
-                Reports, affidavits, delivery confirmations, receipts,
-                documents, or other agreed materials are provided.
-              </p>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>After the Gate: Sponsor a Copy</h2>
-
-          <p>
-            <em>After the Gate: A Wisconsin Reentry Guide for Staying Free</em>,
-            written by Paper Chasers LLC founder Michael Winius, is an honest,
-            practical guide to supervision, employment, finances, family, and
-            rebuilding life after incarceration.
-          </p>
-
-          <p>
-            Help us place copies in Wisconsin correctional facility libraries.
-            $10 sponsors one copy, $50 sponsors five, and $360 sponsors a copy
-            for all 36 Wisconsin DOC facilities.
-          </p>
-
-          <p>
-            <a class="btn btn-primary" href="after-the-gate.html">
-              Sponsor a Copy
-            </a>
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>Meet the Owner</h2>
-
-          <div class="grid-2">
-
-            <div>
-
-              <p>
-                Paper Chasers LLC is owned and operated by Michael Winius.
-              </p>
-
-              <p>
-                Michael built the company around firsthand experience with
-                complicated paperwork, deadlines, public agencies, legal
-                procedures, business operations, document organization, and
-                the practical challenges people face when trying to move an
-                important matter forward.
-              </p>
-
-              <p>
-                That experience shaped a direct service model: listen
-                carefully, clarify the assignment, organize the information,
-                maintain realistic expectations, document the work, and
-                communicate the next step.
-              </p>
-
-              <p>
-                Michael works directly with clients, attorneys, businesses,
-                property professionals, and organizations from intake through
-                completion.
-              </p>
-
-              <p>
-                Michael also hosts
-                <a href="https://www.youtube.com/@ThePeoplesParalegal" target="_blank" rel="noopener">The People's Paralegal</a>,
-                a YouTube series with plain-language episodes on Wisconsin
-                court records, supervision, and reentry.
-              </p>
-
-              <p>
-                <a class="btn" href="about.html">
-                  Learn More About Paper Chasers
-                </a>
-              </p>
-
-            </div>
-
-            <div>
-
-              <img
-                src="mike.jpg"
-                alt="Michael Winius, owner of Paper Chasers LLC"
-                class="owner-photo"
-              />
-
-              <div class="photo-caption">
-                Michael Winius — CEO and Owner, Paper Chasers LLC
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>Wisconsin Service Area</h2>
-
-          <p>
-            Paper Chasers LLC is based in Appleton and regularly serves the Fox
-            Valley and surrounding communities. Approved assignments may also
-            be accepted elsewhere in Wisconsin depending on the service,
-            distance, deadline, travel requirements, and availability.
-          </p>
-
-          <div class="city-grid">
-
-            <a class="city-link" href="appleton-process-service.html">
-              Appleton
-            </a>
-
-            <a class="city-link" href="kaukauna-process-service.html">
-              Kaukauna
-            </a>
-
-            <a class="city-link" href="neenah-process-service.html">
-              Neenah
-            </a>
-
-            <a class="city-link" href="menasha-process-service.html">
-              Menasha
-            </a>
-
-            <a class="city-link" href="oshkosh-process-service.html">
-              Oshkosh
-            </a>
-
-            <a class="city-link" href="green-bay-process-service.html">
-              Green Bay
-            </a>
-
-            <a class="city-link" href="new-london-process-service.html">
-              New London
-            </a>
-
-            <a class="city-link" href="seymour-process-service.html">
-              Seymour
-            </a>
-
-            <a class="city-link" href="chilton-process-service.html">
-              Chilton
-            </a>
-
-            <a class="city-link" href="brillion-process-service.html">
-              Brillion
-            </a>
-
-            <a class="city-link" href="new-holstein-process-service.html">
-              New Holstein
-            </a>
-
-            <a class="city-link" href="shawano-process-service.html">
-              Shawano
-            </a>
-
-            <a class="city-link" href="clintonville-process-service.html">
-              Clintonville
-            </a>
-
-            <a class="city-link" href="waupaca-process-service.html">
-              Waupaca
-            </a>
-
-            <a class="city-link" href="wisconsin-process-service.html">
-              Wisconsin
-            </a>
-
-          </div>
-
-          <p style="text-align:center; margin-top:24px;">
-            <a class="btn" href="service-area.html">
-              View Complete Service Area
-            </a>
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>Client Feedback</h2>
-
-          <div class="testimonials-grid">
-
-            <div class="testimonial">
-
-              <p class="quote">
-                “Fast communication, clear scope, and exactly what was
-                promised—delivered in a timely manner.”
-              </p>
-
-              <p class="who">
-                — SUBdued Entertainment, Small Business Client
-              </p>
-
-            </div>
-
-            <div class="testimonial">
-
-              <p class="quote">
-                “Detail-oriented and reliable. Everything was documented and
-                handled professionally.”
-              </p>
-
-              <p class="who">
-                — AL, Professional Services Client
-              </p>
-
-            </div>
-
-            <div class="testimonial">
-
-              <p class="quote">
-                “No guessing, no surprises. Clear expectations with clean
-                execution.”
-              </p>
-
-              <p class="who">
-                — Tanya N.
-              </p>
-
-            </div>
-
-            <div class="testimonial">
-
-              <p class="quote">
-                “Discreet, efficient, and organized. I would use again.”
-              </p>
-
-              <p class="who">
-                — Kevin S.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>Research Library</h2>
-
-          <p>
-            Plain-language articles on Wisconsin pardons, commutations,
-            expungement, sentence modification, CCAP, public records, and
-            more, with the statutes and cases cited.
-          </p>
-
-          <div class="downloads-grid">
-            <div class="download-item">
-              <h3>Wisconsin Clemency Application Document Checklist and Preparation Guide</h3>
-              <a href="article-clemency-application-document-checklist.html">Read Article</a>
-            </div>
-            <div class="download-item">
-              <h3>Expungement vs. Pardon vs. Commutation vs. Sentence Modification: Understanding Wisconsin Post-Conviction Relief</h3>
-              <a href="article-expungement-pardon-commutation-sentence-modification.html">Read Article</a>
-            </div>
-            <div class="download-item">
-              <h3>Understanding Wisconsin CCAP: What the Public Can and Cannot See</h3>
-              <a href="article-understanding-wisconsin-ccap.html">Read Article</a>
-            </div>
-          </div>
-
-          <p>
-            <a class="btn btn-primary" href="articles.html">Browse All 17 Articles</a>
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>Downloads</h2>
-
-          <p>
-            Download key Paper Chasers LLC service documents and client
-            resources.
-          </p>
-
-          <div class="notice">
-            <strong>Download Everything:</strong>
-            <a href="docs/Paper_Chasers_PDF_Downloads.zip">
-              Paper Chasers PDF Pack
-            </a>
-          </div>
-
-          <div class="downloads-grid">
-
-            <div class="download-item">
-
-              <h3>Rapist, Pedophile, Sex Offender: Why Wisconsin Law Says They&#x27;re Not the Same</h3>
-
-              <a
-                href="docs/Paper_Chasers_Wisconsin_Sexual_Offenses_and_Offenders.pdf"
-              >
-                Download PDF
-              </a>
-
-            </div>
-
-            <div class="download-item">
-
-              <h3>Wisconsin Criminal Procedure: A Step-by-Step Public Guide</h3>
-
-              <a
-                href="docs/Paper_Chasers_Wisconsin_Criminal_Procedure_Guide.pdf"
-              >
-                Download PDF
-              </a>
-
-            </div>
-
-            <div class="download-item">
-
-              <h3>Sentence Modification in Wisconsin: A Companion Guide</h3>
-
-              <a
-                href="docs/Paper_Chasers_Wisconsin_Sentence_Modification_Companion_Guide.pdf"
-              >
-                Download PDF
-              </a>
-
-            </div>
-
-            <div class="download-item">
-
-              <h3>Comprehensive Rate Sheet</h3>
-
-              <a
-                href="docs/Paper_Chasers_LLC_Final_Comprehensive_Rate_Sheet.pdf"
-              >
-                Download PDF
-              </a>
-
-            </div>
-
-            <div class="download-item">
-
-              <h3>Wisconsin Pardon Intake Questionnaire</h3>
-
-              <a
-                href="docs/Paper_Chasers_LLC_WI_Clemency_Intake_Form.pdf"
-              >
-                Download PDF
-              </a>
-
-            </div>
-
-            <div class="download-item">
-
-              <h3>Client Submission Checklist</h3>
-
-              <a
-                href="docs/Paper_Chasers_Client_Submission_Checklist.pdf"
-              >
-                Download PDF
-              </a>
-
-            </div>
-
-            <div class="download-item">
-
-              <h3>One-Page Marketing Summary</h3>
-
-              <a
-                href="docs/Paper_Chasers_LLC_One_Page_Marketing_Summary.pdf"
-              >
-                Download PDF
-              </a>
-
-            </div>
-
-            <div class="download-item">
-
-              <h3>Pardon Support Overview</h3>
-
-              <a
-                href="docs/Paper_Chasers_LLC_Clemency_Marketing_Sheet.pdf"
-              >
-                Download PDF
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>In the Field</h2>
-
-          <p>
-            Practical support. Clear communication. Documented follow-through.
-          </p>
-
-          <div class="gallery-grid">
-
-            <img
-              class="gallery-image"
-              src="gallery-2.jpg"
-              alt="Paper Chasers LLC document delivery and professional support"
-            />
-
-            <img
-              class="gallery-image"
-              src="gallery-3.jpg"
-              alt="Paper Chasers LLC Wisconsin field assignment"
-            />
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-
-        <div class="card">
-
-          <h2>Professional Service Boundaries</h2>
-
-          <div class="grid-4">
-
-            <div class="tile">
-
-              <h3>Not a Law Firm</h3>
-
-              <p>
-                Paper Chasers LLC is not a law firm and does not provide legal
-                representation.
-              </p>
-
-            </div>
-
-            <div class="tile">
-
-              <h3>No Legal Advice</h3>
-
-              <p>
-                We do not advise clients regarding legal rights, strategy,
-                claims, defenses, or legal remedies.
-              </p>
-
-            </div>
-
-            <div class="tile">
-
-              <h3>No Guaranteed Results</h3>
-
-              <p>
-                We cannot guarantee service, filing acceptance, title issuance,
-                pardon approval, court action, or agency decisions.
-              </p>
-
-            </div>
-
-            <div class="tile">
-
-              <h3>Client Review Required</h3>
-
-              <p>
-                Clients remain responsible for factual accuracy, signatures,
-                deadlines, instructions, decisions, and final approval.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="notice">
-            When an assignment requires legal advice, legal representation, or
-            independent legal judgment, the client should consult a licensed
-            attorney.
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="cta">
-
-      <h2>Tell Us What You Need Help Moving Forward</h2>
-
-      <p>
-        Send Paper Chasers LLC the assignment type, location, available
-        documents, deadline, and expected result. We will review the request
-        and explain whether we can assist.
-      </p>
-
-      <p>
-        <strong>Call or Text:</strong>
-        <a href="tel:+19205728646">(920) 572-8646</a>
-      </p>
-
-      <p>
-
-        <a class="btn btn-primary" href="request.html">
-          Request Service
-        </a>
-
-        <a class="btn" href="mailto:info@paperchasersllc.com">
-          Email Paper Chasers
-        </a>
-
-      </p>
-
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div>
-
-          <h3>Paper Chasers LLC</h3>
-
-          <p>
-            Professional Administrative &amp; Litigation Support Services
-          </p>
-
-          <p>
-            P.O. Box 151<br />
-            Appleton, WI 54911
-          </p>
-
-          <p>
-            Call or Text:
-            <a href="tel:+19205728646">(920) 572-8646</a><br />
-
-            Email:
-            <a href="mailto:info@paperchasersllc.com">
-              info@paperchasersllc.com
-            </a>
-          </p>
-
-        </div>
-
-        <div>
-
-          <h3>Services</h3>
-
-          <div class="footer-links">
-
-            <a href="process-service.html">
-              Process Service
-            </a>
-
-            <a href="courier-document-delivery.html">
-              Courier &amp; Document Delivery
-            </a>
-
-            <a href="administrative-support.html">
-              Administrative Support
-            </a>
-
-            <a href="attorney-law-firm-services.html">
-              Attorney &amp; Law Firm Services
-            </a>
-
-            <a href="clemency-assistance.html">
-              Wisconsin Pardon Support
-            </a>
-
-            <a href="abandoned-vehicles.html">
-              Vehicle Title Assistance
-            </a>
-
-          </div>
-
-        </div>
-
-        <div>
-
-          <h3>Company Information</h3>
-
-          <div class="footer-links">
-
-            <a href="about.html">
-              About Paper Chasers
-            </a>
-
-            <a href="service-area.html">
-              Service Area
-            </a>
-
-            <a href="fees.html">
-              Fees
-            </a>
-
-            <a href="articles.html">
-              Articles
-            </a>
-
-            <a href="https://www.youtube.com/@ThePeoplesParalegal" target="_blank" rel="noopener">
-              The People's Paralegal (YouTube)
-            </a>
-
-            <a href="https://www.facebook.com/profile.php?id=61596423324714" target="_blank" rel="noopener">
-              Facebook
-            </a>
-
-            <a href="https://www.instagram.com/paperchasersllc.wi/" target="_blank" rel="noopener">
-              Instagram
-            </a>
-
-            <a href="https://www.tiktok.com/@paperchasersllc" target="_blank" rel="noopener">
-              TikTok
-            </a>
-
-            <a href="request.html">
-              Request Service
-            </a>
-
-            <a href="terms.html">
-              Terms
-            </a>
-
-            <a href="privacy.html">
-              Privacy
-            </a>
-
-            <a href="sitemap.html">
-              Website Sitemap
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-
-        <div>
-          Paper Chasers LLC is not a law firm and does not provide legal advice
-          or legal representation.
-        </div>
-
-        <div style="margin-top:9px;">
-          © Paper Chasers LLC — Wisconsin
-        </div>
-
-      </div>
-
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.querySelectorAll('.menu-toggle').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var open = b.closest('.nav').classList.toggle('nav-open');
-        b.setAttribute('aria-expanded', open);
-        b.innerHTML = open ? '&#10005; Close' : '&#9776; Menu';
-      });
-    });
-  </script>
+  <section class="section" aria-labelledby="bounds-title">
+    <div class="wrap">
+      <div class="boundaries">
+        <h2 id="bounds-title">What we don't do</h2>
+        <p>
+          Paper Chasers LLC is not a law firm. We don't give legal advice, represent
+          anyone in court, or guarantee service, filing acceptance, pardon approval,
+          or agency decisions. Clients remain responsible for accuracy, signatures,
+          and deadlines. For legal advice, consult a licensed Wisconsin attorney.
+          <a href="terms.html">Read our terms</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta on-ink" aria-labelledby="cta-title">
+    <div class="wrap cta-row">
+      <div>
+        <h2 id="cta-title">Have papers to serve or deliver?</h2>
+        <p>Send the task, location, and deadline. We'll confirm whether we can take it and what it costs.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="request.html">Request service</a>
+        <a class="btn btn-ghost" href="tel:+19205728646">Call (920) 572-8646</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="logo-mark-white.png" alt="Paper Chasers LLC" width="243" height="176" />
+        <address>
+          P.O. Box 151<br />
+          Appleton, WI 54911<br />
+          Call or text: <a href="tel:+19205728646">(920) 572-8646</a><br />
+          <a href="mailto:info@paperchasersllc.com">info@paperchasersllc.com</a>
+        </address>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="process-service.html">Process service</a></li>
+          <li><a href="courier-document-delivery.html">Courier &amp; filings</a></li>
+          <li><a href="administrative-support.html">Administrative support</a></li>
+          <li><a href="attorney-law-firm-services.html">Attorney services</a></li>
+          <li><a href="clemency-assistance.html">Pardon support</a></li>
+          <li><a href="abandoned-vehicles.html">Vehicle titles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="fees.html">Fees</a></li>
+          <li><a href="service-area.html">Service area</a></li>
+          <li><a href="articles.html">Research library</a></li>
+          <li><a href="request.html">Request service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@ThePeoplesParalegal">YouTube</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61596423324714">Facebook</a></li>
+          <li><a href="https://www.instagram.com/paperchasersllc.wi/">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@paperchasersllc">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© Paper Chasers LLC, Wisconsin. Not a law firm. No legal advice or representation.</span>
+      <span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="sitemap.html">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-ghost" href="tel:+19205728646">Call</a>
+  <a class="btn btn-primary" href="request.html">Request service</a>
+</div>
+
 </body>
 </html>
