@@ -343,8 +343,13 @@ p { margin: 0; }
 
 /* After the Gate feature */
 .gate { background: var(--ink); color: #d3dae2; padding: 92px 0; }
-.gate-grid { display: grid; grid-template-columns: 420px 1fr; gap: 64px; align-items: start; }
-.gate-art img { width: 100%; height: auto; border-radius: 6px; box-shadow: 0 24px 50px rgba(0,0,0,.4); }
+.gate-grid { display: grid; grid-template-columns: 360px 1fr; gap: 64px; align-items: start; }
+.gate-art { position: sticky; top: 110px; }
+.book { display: block; position: relative; border-radius: 2px 6px 6px 2px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.06); }
+.book img { width: 100%; height: auto; display: block; }
+.book::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.28) 0, rgba(255,255,255,.12) 2.5%, rgba(0,0,0,0) 6%); pointer-events: none; }
+.player-top { display: flex; gap: 16px; align-items: center; }
+.album-thumb { width: 76px; height: 76px; border-radius: 4px; flex: none; box-shadow: 0 8px 18px rgba(0,0,0,.35); }
 .gate h2 { color: var(--white); font-size: clamp(2.2rem, 4vw, 3rem); }
 .gate-sub { font-family: var(--serif); font-size: 1.3rem; color: var(--honey); margin-top: 10px; }
 .gate-text > p { margin-top: 16px; max-width: 60ch; }
@@ -353,7 +358,7 @@ p { margin: 0; }
 .player-head a { color: var(--white); }
 .gate-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 .player { margin-top: 36px; border-top: 1px solid #2c3b4c; padding-top: 22px; }
-.player-head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.player-head { display: flex; flex-direction: column; gap: 2px; margin: 0; }
 .player-head span { color: #a9b5c2; font-size: .92rem; }
 .player audio { width: 100%; margin: 14px 0 10px; }
 .tracks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
@@ -369,7 +374,8 @@ p { margin: 0; }
 @media (max-width: 900px) {
   .gate { padding: 64px 0; }
   .gate-grid { grid-template-columns: 1fr; gap: 36px; }
-  .gate-art img { max-width: 360px; }
+  .gate-art { position: static; }
+  .book { max-width: 260px; }
   .tracks { grid-template-columns: 1fr; }
 }
   </style>
@@ -733,7 +739,7 @@ p { margin: 0; }
   <section class="gate on-ink" id="after-the-gate" aria-labelledby="gate-title">
     <div class="wrap gate-grid">
       <div class="gate-art">
-        <img src="media/after-the-gate/after-the-gate-album-cover.jpg" alt="After the Gate album cover by NOCX: a man with a duffel bag waits at a bus stop outside a prison at sunrise" width="800" height="800" loading="lazy" />
+        <a href="https://www.amazon.com/After-Gate-Wisconsin-Reentry-Staying/dp/B0HJ17THHB" class="book"><img src="media/after-the-gate/after-the-gate-book-cover.jpg" alt="After the Gate: A Wisconsin Reentry Guide for Staying Free, by Michael Winius (book cover)" width="1000" height="1499" loading="lazy" /></a>
       </div>
       <div class="gate-text">
         <h2 id="gate-title">After the Gate</h2>
@@ -755,7 +761,10 @@ p { margin: 0; }
         </div>
 
         <div class="player">
-          <p class="player-head"><strong>Listen: <em>After the Gate</em></strong> <span>NOCX &middot; 8 songs &middot; 27 min &middot; Also on <a href="https://open.spotify.com/album/2iSYhLPMBT0nTsjFn93Wup">Spotify</a>, <a href="https://music.apple.com/us/album/after-the-gate/6815020123">Apple Music</a>, and all major streaming platforms</span></p>
+          <div class="player-top">
+            <img class="album-thumb" src="media/after-the-gate/after-the-gate-album-cover.jpg" alt="After the Gate album cover by NOCX" width="800" height="800" loading="lazy" />
+            <p class="player-head"><strong>The companion album: <em>After the Gate</em> by NOCX</strong> <span>NOCX &middot; 8 songs &middot; 27 min &middot; Also on <a href="https://open.spotify.com/album/2iSYhLPMBT0nTsjFn93Wup">Spotify</a>, <a href="https://music.apple.com/us/album/after-the-gate/6815020123">Apple Music</a>, and all major streaming platforms</span></p>
+          </div>
           <audio id="gate-audio" controls preload="none" src="media/after-the-gate/01-out-of-the-cell.mp3">Your browser does not support audio playback.</audio>
           <ol class="tracks" role="list">
             <li><button type="button" class="track-btn is-current" data-src="media/after-the-gate/01-out-of-the-cell.mp3" aria-pressed="true"><span class="tn">1</span><span class="tt">Out of the Cell</span><span class="td">2:31</span></button></li>
