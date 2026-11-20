@@ -227,6 +227,14 @@ button.btn { cursor: pointer; }
 
 .callbar { display: none; }
 
+/* Keep header items on one line at laptop widths */
+.site-nav a, .nav a, .header-actions .btn, .brand span { white-space: nowrap; }
+@media (max-width: 1300px) {
+  .header-row { gap: 20px; }
+  .site-nav, .nav { gap: 16px; }
+  .header-phone { display: none; }
+}
+
 @media (max-width: 1060px) {
   .site-nav, .header-phone { display: none; }
   .menu { display: block; }

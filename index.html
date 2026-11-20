@@ -298,6 +298,13 @@ p { margin: 0; }
 /* Mobile call bar */
 .callbar { display: none; }
 
+/* Keep header items on one line at laptop widths */
+.site-nav a, .nav a, .header-actions .btn, .brand span { white-space: nowrap; }
+@media (max-width: 1300px) {
+  .header-row { gap: 20px; }
+  .site-nav, .nav { gap: 16px; }
+  .header-phone { display: none; }
+}
 @media (max-width: 1060px) {
   .nav, .header-phone { display: none; }
   .menu { display: block; margin-left: 0; }
@@ -530,6 +537,7 @@ p { margin: 0; }
       <a href="fees.html">Fees</a>
       <a href="service-area.html">Service area</a>
       <a href="articles.html">Library</a>
+      <a href="peoples-paralegal.html">Videos</a>
       <a href="about.html">About</a>
     </nav>
 
@@ -550,6 +558,7 @@ p { margin: 0; }
         <a href="fees.html">Fees</a>
         <a href="service-area.html">Service area</a>
         <a href="articles.html">Research library</a>
+        <a href="peoples-paralegal.html">The People&rsquo;s Paralegal</a>
         <a href="after-the-gate.html">After the Gate</a>
         <a href="about.html">About</a>
         <a href="request.html">Request service</a>
@@ -728,7 +737,7 @@ p { margin: 0; }
         <p>
           Michael built the company around firsthand experience with deadlines,
           public agencies, court procedure, and the paperwork that keeps a matter
-          moving. He also hosts The People's Paralegal, a free YouTube series on
+          moving. He also hosts <a href="peoples-paralegal.html">The People's Paralegal</a>, a free YouTube series on
           Wisconsin court records, supervision, and reentry.
         </p>
         <a class="btn btn-ghost" href="about.html">About Paper Chasers</a>
@@ -825,8 +834,8 @@ p { margin: 0; }
         </article>
         <article class="resource">
           <h3>The People's Paralegal</h3>
-          <p>Short videos that explain Wisconsin court records, supervision, and process service in everyday terms.</p>
-          <a class="more" href="https://www.youtube.com/@ThePeoplesParalegal">Watch on YouTube</a>
+          <p>Free episodes that explain Wisconsin court records, supervision, criminal procedure, and self-representation in everyday terms.</p>
+          <a class="more" href="peoples-paralegal.html">Watch the episodes</a>
         </article>
         <article class="resource">
           <h3>Client forms</h3>
@@ -897,6 +906,7 @@ p { margin: 0; }
           <li><a href="fees.html">Fees</a></li>
           <li><a href="service-area.html">Service area</a></li>
           <li><a href="articles.html">Research library</a></li>
+          <li><a href="peoples-paralegal.html">The People&rsquo;s Paralegal</a></li>
           <li><a href="after-the-gate.html">After the Gate</a></li>
           <li><a href="request.html">Request service</a></li>
         </ul>
@@ -904,7 +914,7 @@ p { margin: 0; }
       <div>
         <h3>Follow</h3>
         <ul>
-          <li><a href="https://www.youtube.com/@ThePeoplesParalegal">YouTube</a></li>
+          <li><a href="https://www.youtube.com/@ThePeoplesParalegal">The People&rsquo;s Paralegal on YouTube</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=61596423324714">Facebook</a></li>
           <li><a href="https://www.instagram.com/paperchasersllc.wi/">Instagram</a></li>
           <li><a href="https://www.tiktok.com/@paperchasersllc">TikTok</a></li>
